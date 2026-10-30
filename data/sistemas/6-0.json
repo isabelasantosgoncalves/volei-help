@@ -1,0 +1,1371 @@
+{
+  "id": "6-0",
+  "nome": "Sistema 6-0",
+  "versao": 2,
+  "descricao": {
+    "resumo": "Não há levantador fixo: quem estiver na posição 3 (frente meio) levanta naquele rodízio, e todos atacam, passam e defendem.",
+    "secoes": [
+      {
+        "titulo": "Quem levanta",
+        "texto": "Em cada rodízio, o jogador da posição 3 vira o levantador da vez. Como o time gira, cada jogador levanta em um dos seis rodízios. Algumas equipes usam a posição 2 como levantador; aqui segue a forma mais ensinada nas escolinhas, com a 3."
+      },
+      {
+        "titulo": "Na recepção",
+        "texto": "O levantador da vez fica colado na rede e os outros cinco recebem em W. Depois do passe, os jogadores da 4 e da 2 atacam, cada um pelo seu lado."
+      },
+      {
+        "titulo": "Depois do saque",
+        "texto": "Ninguém troca de lado: cada um defende na zona em que está. Isso deixa o sistema simples e ajuda quem ainda está aprendendo o rodízio."
+      },
+      {
+        "titulo": "Vantagens",
+        "texto": "Todos treinam todos os fundamentos. É ótimo para iniciantes e para aprender a numeração e a rotação."
+      },
+      {
+        "titulo": "Cuidados",
+        "texto": "Sem especialistas, o levantamento e o ataque mudam de qualidade a cada rodízio."
+      }
+    ]
+  },
+  "coordenadas": {
+    "x": "0 = linha lateral esquerda, 100 = linha lateral direita (olhando para a rede)",
+    "y": "0 = rede, 100 = linha de fundo, acima de 100 = zona de saque"
+  },
+  "regraSaquePadrao": "nova",
+  "regrasSaque": {
+    "nova": {
+      "nome": "Regra atual",
+      "curto": "Atual (desde 2025)",
+      "descricao": "Desde 2025 (Regras Oficiais FIVB 2025–2028, regra 7.4), só o time que recebe precisa estar na ordem do rodízio no momento do saque; os jogadores do time que saca podem ocupar qualquer lugar da sua quadra (o sacador na zona de saque)."
+    },
+    "antiga": {
+      "nome": "Regra até 2024",
+      "curto": "Até 2024",
+      "descricao": "Até 2024, no momento do saque, o time que saca também precisava respeitar a ordem do rodízio (frente/fundo e esquerda/direita)."
+    }
+  },
+  "jogadores": {
+    "J1": {
+      "nome": "Jogador 1",
+      "funcao": "atacante"
+    },
+    "J2": {
+      "nome": "Jogador 2",
+      "funcao": "atacante"
+    },
+    "J3": {
+      "nome": "Jogador 3",
+      "funcao": "atacante"
+    },
+    "J4": {
+      "nome": "Jogador 4",
+      "funcao": "atacante"
+    },
+    "J5": {
+      "nome": "Jogador 5",
+      "funcao": "atacante"
+    },
+    "J6": {
+      "nome": "Jogador 6",
+      "funcao": "atacante"
+    }
+  },
+  "rodizios": [
+    {
+      "id": "R1",
+      "nome": "Rodízio 1",
+      "apelido": "J5 levanta",
+      "ordem": {
+        "1": "J1",
+        "2": "J6",
+        "3": "J5",
+        "4": "J4",
+        "5": "J3",
+        "6": "J2"
+      },
+      "levantador": "J5",
+      "fases": {
+        "saque": {
+          "sacador": "J1",
+          "resumo": {
+            "antiga": "J1 saca da posição 1. Pela regra até 2024, todos respeitam a ordem do rodízio no momento do saque e trocam de lugar logo depois. No 6-0 cada um defende na zona onde está.",
+            "nova": "J1 saca da posição 1. Pela regra atual, o time que saca pode ficar em qualquer posição; o mais comum é já começar onde vai defender. No 6-0 cada um defende na zona onde está."
+          },
+          "antiga": {
+            "J1": {
+              "x": 83,
+              "y": 112,
+              "para": {
+                "x": 80,
+                "y": 80
+              },
+              "motivo": "Jogador 1 é a posição 1: é quem saca, de dentro da zona de saque. Depois do saque, entra na quadra e defende no fundo direita (zona 1)."
+            },
+            "J6": {
+              "x": 83,
+              "y": 20,
+              "para": {
+                "x": 85,
+                "y": 12
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 6 fica na zona 2. Pela regra de sobreposição, precisa estar à frente da posição 1 (J1) e à direita da posição 3 (J5). Depois do saque, vai defender na rede pela saída (zona 2)."
+            },
+            "J5": {
+              "x": 50,
+              "y": 20,
+              "para": {
+                "x": 50,
+                "y": 10
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 5 fica na zona 3. Pela regra de sobreposição, precisa estar à frente da posição 6 (J2), à direita da posição 4 (J4) e à esquerda da posição 2 (J6). Depois do saque, vai defender na rede pelo meio (zona 3)."
+            },
+            "J4": {
+              "x": 17,
+              "y": 20,
+              "para": {
+                "x": 15,
+                "y": 12
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 4 fica na zona 4. Pela regra de sobreposição, precisa estar à frente da posição 5 (J3) e à esquerda da posição 3 (J5). Depois do saque, vai defender na rede pela entrada (zona 4)."
+            },
+            "J3": {
+              "x": 17,
+              "y": 75,
+              "para": {
+                "x": 20,
+                "y": 80
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 3 fica na zona 5. Pela regra de sobreposição, precisa estar atrás da posição 4 (J4) e à esquerda da posição 6 (J2). Depois do saque, vai defender no fundo esquerda (zona 5)."
+            },
+            "J2": {
+              "x": 50,
+              "y": 75,
+              "para": {
+                "x": 50,
+                "y": 85
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 2 fica na zona 6. Pela regra de sobreposição, precisa estar atrás da posição 3 (J5), à direita da posição 5 (J3) e à esquerda da posição 1 (J1). Depois do saque, vai defender no fundo meio (zona 6)."
+            }
+          },
+          "nova": {
+            "J1": {
+              "x": 83,
+              "y": 112,
+              "para": {
+                "x": 80,
+                "y": 80
+              },
+              "motivo": "Jogador 1 é a posição 1: é quem saca, de dentro da zona de saque. Depois do saque, entra na quadra e defende no fundo direita (zona 1)."
+            },
+            "J6": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 6 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pela saída (zona 2)."
+            },
+            "J5": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 5 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pelo meio (zona 3)."
+            },
+            "J4": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 4 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pela entrada (zona 4)."
+            },
+            "J3": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 3 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: no fundo esquerda (zona 5)."
+            },
+            "J2": {
+              "x": 50,
+              "y": 85,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 2 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: no fundo meio (zona 6)."
+            }
+          }
+        },
+        "recepcao": {
+          "resumo": "Levantador da vez (J5) na 3: fica colado na rede. A recepção fica com J4, J3, J2, J1 e J6. No primeiro ataque, cada um bate pelo lado onde está: J4 pela entrada e J6 pela saída.",
+          "receptores": [
+            "J4",
+            "J3",
+            "J2",
+            "J1",
+            "J6"
+          ],
+          "posicoes": {
+            "J5": {
+              "x": 50,
+              "y": 8,
+              "para": {
+                "x": 62,
+                "y": 10
+              },
+              "motivo": "Jogador 5 é a posição 3 neste rodízio. Não recebe: fica colado na rede para chegar rápido ao ponto de levantamento, entre a 2 e a 3. Pela regra de sobreposição, precisa estar à frente da posição 6 (J2), à direita da posição 4 (J4) e à esquerda da posição 2 (J6)."
+            },
+            "J4": {
+              "x": 18,
+              "y": 42,
+              "para": {
+                "x": 15,
+                "y": 22
+              },
+              "motivo": "Jogador 4 é a posição 4 neste rodízio. Faz parte da recepção com J3, J2, J1 e J6 e recebe pela esquerda. Depois do passe, ataca pela entrada (zona 4). Pela regra de sobreposição, precisa estar à frente da posição 5 (J3) e à esquerda da posição 3 (J5)."
+            },
+            "J6": {
+              "x": 82,
+              "y": 42,
+              "para": {
+                "x": 86,
+                "y": 22
+              },
+              "motivo": "Jogador 6 é a posição 2 neste rodízio. Faz parte da recepção com J4, J3, J2 e J1 e recebe pela direita. Depois do passe, ataca pela saída (zona 2). Pela regra de sobreposição, precisa estar à frente da posição 1 (J1) e à direita da posição 3 (J5)."
+            },
+            "J3": {
+              "x": 22,
+              "y": 72,
+              "para": {
+                "x": 20,
+                "y": 75
+              },
+              "motivo": "Jogador 3 é a posição 5 neste rodízio. Faz parte da recepção com J4, J2, J1 e J6 e recebe pela esquerda. Depois do passe, fica no fundo para o ataque de fundo. Pela regra de sobreposição, precisa estar atrás da posição 4 (J4) e à esquerda da posição 6 (J2)."
+            },
+            "J2": {
+              "x": 50,
+              "y": 58,
+              "para": {
+                "x": 50,
+                "y": 78
+              },
+              "motivo": "Jogador 2 é a posição 6 neste rodízio. Faz parte da recepção com J4, J3, J1 e J6 e recebe pelo meio. Depois do passe, fica no fundo para o ataque de fundo. Pela regra de sobreposição, precisa estar atrás da posição 3 (J5), à direita da posição 5 (J3) e à esquerda da posição 1 (J1)."
+            },
+            "J1": {
+              "x": 78,
+              "y": 72,
+              "para": {
+                "x": 80,
+                "y": 75
+              },
+              "motivo": "Jogador 1 é a posição 1 neste rodízio. Faz parte da recepção com J4, J3, J2 e J6 e recebe pela direita. Depois do passe, fica no fundo para o ataque de fundo. Pela regra de sobreposição, precisa estar atrás da posição 2 (J6) e à direita da posição 6 (J2)."
+            }
+          }
+        },
+        "defesa": {
+          "resumo": "Na rede: J4 na entrada, J5 no meio e J6 na saída. No fundo: J3 na 5, J2 na 6 e J1 na 1. No 6-0 ninguém troca de lado: cada um defende na zona em que está.",
+          "posicoes": {
+            "J4": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Jogador 4 defende na rede pela entrada (zona 4). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J5": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Jogador 5 defende na rede pelo meio (zona 3). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J6": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Jogador 6 defende na rede pela saída (zona 2). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J3": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Jogador 3 defende no fundo esquerda (zona 5). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J2": {
+              "x": 50,
+              "y": 85,
+              "motivo": "Jogador 2 defende no fundo meio (zona 6). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J1": {
+              "x": 80,
+              "y": 80,
+              "motivo": "Jogador 1 defende no fundo direita (zona 1). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "R2",
+      "nome": "Rodízio 2",
+      "apelido": "J4 levanta",
+      "ordem": {
+        "1": "J6",
+        "2": "J5",
+        "3": "J4",
+        "4": "J3",
+        "5": "J2",
+        "6": "J1"
+      },
+      "levantador": "J4",
+      "fases": {
+        "saque": {
+          "sacador": "J6",
+          "resumo": {
+            "antiga": "J6 saca da posição 1. Pela regra até 2024, todos respeitam a ordem do rodízio no momento do saque e trocam de lugar logo depois. No 6-0 cada um defende na zona onde está.",
+            "nova": "J6 saca da posição 1. Pela regra atual, o time que saca pode ficar em qualquer posição; o mais comum é já começar onde vai defender. No 6-0 cada um defende na zona onde está."
+          },
+          "antiga": {
+            "J6": {
+              "x": 83,
+              "y": 112,
+              "para": {
+                "x": 80,
+                "y": 80
+              },
+              "motivo": "Jogador 6 é a posição 1: é quem saca, de dentro da zona de saque. Depois do saque, entra na quadra e defende no fundo direita (zona 1)."
+            },
+            "J5": {
+              "x": 83,
+              "y": 20,
+              "para": {
+                "x": 85,
+                "y": 12
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 5 fica na zona 2. Pela regra de sobreposição, precisa estar à frente da posição 1 (J6) e à direita da posição 3 (J4). Depois do saque, vai defender na rede pela saída (zona 2)."
+            },
+            "J4": {
+              "x": 50,
+              "y": 20,
+              "para": {
+                "x": 50,
+                "y": 10
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 4 fica na zona 3. Pela regra de sobreposição, precisa estar à frente da posição 6 (J1), à direita da posição 4 (J3) e à esquerda da posição 2 (J5). Depois do saque, vai defender na rede pelo meio (zona 3)."
+            },
+            "J3": {
+              "x": 17,
+              "y": 20,
+              "para": {
+                "x": 15,
+                "y": 12
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 3 fica na zona 4. Pela regra de sobreposição, precisa estar à frente da posição 5 (J2) e à esquerda da posição 3 (J4). Depois do saque, vai defender na rede pela entrada (zona 4)."
+            },
+            "J2": {
+              "x": 17,
+              "y": 75,
+              "para": {
+                "x": 20,
+                "y": 80
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 2 fica na zona 5. Pela regra de sobreposição, precisa estar atrás da posição 4 (J3) e à esquerda da posição 6 (J1). Depois do saque, vai defender no fundo esquerda (zona 5)."
+            },
+            "J1": {
+              "x": 50,
+              "y": 75,
+              "para": {
+                "x": 50,
+                "y": 85
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 1 fica na zona 6. Pela regra de sobreposição, precisa estar atrás da posição 3 (J4), à direita da posição 5 (J2) e à esquerda da posição 1 (J6). Depois do saque, vai defender no fundo meio (zona 6)."
+            }
+          },
+          "nova": {
+            "J6": {
+              "x": 83,
+              "y": 112,
+              "para": {
+                "x": 80,
+                "y": 80
+              },
+              "motivo": "Jogador 6 é a posição 1: é quem saca, de dentro da zona de saque. Depois do saque, entra na quadra e defende no fundo direita (zona 1)."
+            },
+            "J5": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 5 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pela saída (zona 2)."
+            },
+            "J4": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 4 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pelo meio (zona 3)."
+            },
+            "J3": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 3 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pela entrada (zona 4)."
+            },
+            "J2": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 2 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: no fundo esquerda (zona 5)."
+            },
+            "J1": {
+              "x": 50,
+              "y": 85,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 1 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: no fundo meio (zona 6)."
+            }
+          }
+        },
+        "recepcao": {
+          "resumo": "Levantador da vez (J4) na 3: fica colado na rede. A recepção fica com J3, J2, J1, J6 e J5. No primeiro ataque, cada um bate pelo lado onde está: J3 pela entrada e J5 pela saída.",
+          "receptores": [
+            "J3",
+            "J2",
+            "J1",
+            "J6",
+            "J5"
+          ],
+          "posicoes": {
+            "J4": {
+              "x": 50,
+              "y": 8,
+              "para": {
+                "x": 62,
+                "y": 10
+              },
+              "motivo": "Jogador 4 é a posição 3 neste rodízio. Não recebe: fica colado na rede para chegar rápido ao ponto de levantamento, entre a 2 e a 3. Pela regra de sobreposição, precisa estar à frente da posição 6 (J1), à direita da posição 4 (J3) e à esquerda da posição 2 (J5)."
+            },
+            "J3": {
+              "x": 18,
+              "y": 42,
+              "para": {
+                "x": 15,
+                "y": 22
+              },
+              "motivo": "Jogador 3 é a posição 4 neste rodízio. Faz parte da recepção com J2, J1, J6 e J5 e recebe pela esquerda. Depois do passe, ataca pela entrada (zona 4). Pela regra de sobreposição, precisa estar à frente da posição 5 (J2) e à esquerda da posição 3 (J4)."
+            },
+            "J5": {
+              "x": 82,
+              "y": 42,
+              "para": {
+                "x": 86,
+                "y": 22
+              },
+              "motivo": "Jogador 5 é a posição 2 neste rodízio. Faz parte da recepção com J3, J2, J1 e J6 e recebe pela direita. Depois do passe, ataca pela saída (zona 2). Pela regra de sobreposição, precisa estar à frente da posição 1 (J6) e à direita da posição 3 (J4)."
+            },
+            "J2": {
+              "x": 22,
+              "y": 72,
+              "para": {
+                "x": 20,
+                "y": 75
+              },
+              "motivo": "Jogador 2 é a posição 5 neste rodízio. Faz parte da recepção com J3, J1, J6 e J5 e recebe pela esquerda. Depois do passe, fica no fundo para o ataque de fundo. Pela regra de sobreposição, precisa estar atrás da posição 4 (J3) e à esquerda da posição 6 (J1)."
+            },
+            "J1": {
+              "x": 50,
+              "y": 58,
+              "para": {
+                "x": 50,
+                "y": 78
+              },
+              "motivo": "Jogador 1 é a posição 6 neste rodízio. Faz parte da recepção com J3, J2, J6 e J5 e recebe pelo meio. Depois do passe, fica no fundo para o ataque de fundo. Pela regra de sobreposição, precisa estar atrás da posição 3 (J4), à direita da posição 5 (J2) e à esquerda da posição 1 (J6)."
+            },
+            "J6": {
+              "x": 78,
+              "y": 72,
+              "para": {
+                "x": 80,
+                "y": 75
+              },
+              "motivo": "Jogador 6 é a posição 1 neste rodízio. Faz parte da recepção com J3, J2, J1 e J5 e recebe pela direita. Depois do passe, fica no fundo para o ataque de fundo. Pela regra de sobreposição, precisa estar atrás da posição 2 (J5) e à direita da posição 6 (J1)."
+            }
+          }
+        },
+        "defesa": {
+          "resumo": "Na rede: J3 na entrada, J4 no meio e J5 na saída. No fundo: J2 na 5, J1 na 6 e J6 na 1. No 6-0 ninguém troca de lado: cada um defende na zona em que está.",
+          "posicoes": {
+            "J3": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Jogador 3 defende na rede pela entrada (zona 4). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J4": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Jogador 4 defende na rede pelo meio (zona 3). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J5": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Jogador 5 defende na rede pela saída (zona 2). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J2": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Jogador 2 defende no fundo esquerda (zona 5). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J1": {
+              "x": 50,
+              "y": 85,
+              "motivo": "Jogador 1 defende no fundo meio (zona 6). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J6": {
+              "x": 80,
+              "y": 80,
+              "motivo": "Jogador 6 defende no fundo direita (zona 1). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "R3",
+      "nome": "Rodízio 3",
+      "apelido": "J3 levanta",
+      "ordem": {
+        "1": "J5",
+        "2": "J4",
+        "3": "J3",
+        "4": "J2",
+        "5": "J1",
+        "6": "J6"
+      },
+      "levantador": "J3",
+      "fases": {
+        "saque": {
+          "sacador": "J5",
+          "resumo": {
+            "antiga": "J5 saca da posição 1. Pela regra até 2024, todos respeitam a ordem do rodízio no momento do saque e trocam de lugar logo depois. No 6-0 cada um defende na zona onde está.",
+            "nova": "J5 saca da posição 1. Pela regra atual, o time que saca pode ficar em qualquer posição; o mais comum é já começar onde vai defender. No 6-0 cada um defende na zona onde está."
+          },
+          "antiga": {
+            "J5": {
+              "x": 83,
+              "y": 112,
+              "para": {
+                "x": 80,
+                "y": 80
+              },
+              "motivo": "Jogador 5 é a posição 1: é quem saca, de dentro da zona de saque. Depois do saque, entra na quadra e defende no fundo direita (zona 1)."
+            },
+            "J4": {
+              "x": 83,
+              "y": 20,
+              "para": {
+                "x": 85,
+                "y": 12
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 4 fica na zona 2. Pela regra de sobreposição, precisa estar à frente da posição 1 (J5) e à direita da posição 3 (J3). Depois do saque, vai defender na rede pela saída (zona 2)."
+            },
+            "J3": {
+              "x": 50,
+              "y": 20,
+              "para": {
+                "x": 50,
+                "y": 10
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 3 fica na zona 3. Pela regra de sobreposição, precisa estar à frente da posição 6 (J6), à direita da posição 4 (J2) e à esquerda da posição 2 (J4). Depois do saque, vai defender na rede pelo meio (zona 3)."
+            },
+            "J2": {
+              "x": 17,
+              "y": 20,
+              "para": {
+                "x": 15,
+                "y": 12
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 2 fica na zona 4. Pela regra de sobreposição, precisa estar à frente da posição 5 (J1) e à esquerda da posição 3 (J3). Depois do saque, vai defender na rede pela entrada (zona 4)."
+            },
+            "J1": {
+              "x": 17,
+              "y": 75,
+              "para": {
+                "x": 20,
+                "y": 80
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 1 fica na zona 5. Pela regra de sobreposição, precisa estar atrás da posição 4 (J2) e à esquerda da posição 6 (J6). Depois do saque, vai defender no fundo esquerda (zona 5)."
+            },
+            "J6": {
+              "x": 50,
+              "y": 75,
+              "para": {
+                "x": 50,
+                "y": 85
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 6 fica na zona 6. Pela regra de sobreposição, precisa estar atrás da posição 3 (J3), à direita da posição 5 (J1) e à esquerda da posição 1 (J5). Depois do saque, vai defender no fundo meio (zona 6)."
+            }
+          },
+          "nova": {
+            "J5": {
+              "x": 83,
+              "y": 112,
+              "para": {
+                "x": 80,
+                "y": 80
+              },
+              "motivo": "Jogador 5 é a posição 1: é quem saca, de dentro da zona de saque. Depois do saque, entra na quadra e defende no fundo direita (zona 1)."
+            },
+            "J4": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 4 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pela saída (zona 2)."
+            },
+            "J3": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 3 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pelo meio (zona 3)."
+            },
+            "J2": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 2 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pela entrada (zona 4)."
+            },
+            "J1": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 1 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: no fundo esquerda (zona 5)."
+            },
+            "J6": {
+              "x": 50,
+              "y": 85,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 6 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: no fundo meio (zona 6)."
+            }
+          }
+        },
+        "recepcao": {
+          "resumo": "Levantador da vez (J3) na 3: fica colado na rede. A recepção fica com J2, J1, J6, J5 e J4. No primeiro ataque, cada um bate pelo lado onde está: J2 pela entrada e J4 pela saída.",
+          "receptores": [
+            "J2",
+            "J1",
+            "J6",
+            "J5",
+            "J4"
+          ],
+          "posicoes": {
+            "J3": {
+              "x": 50,
+              "y": 8,
+              "para": {
+                "x": 62,
+                "y": 10
+              },
+              "motivo": "Jogador 3 é a posição 3 neste rodízio. Não recebe: fica colado na rede para chegar rápido ao ponto de levantamento, entre a 2 e a 3. Pela regra de sobreposição, precisa estar à frente da posição 6 (J6), à direita da posição 4 (J2) e à esquerda da posição 2 (J4)."
+            },
+            "J2": {
+              "x": 18,
+              "y": 42,
+              "para": {
+                "x": 15,
+                "y": 22
+              },
+              "motivo": "Jogador 2 é a posição 4 neste rodízio. Faz parte da recepção com J1, J6, J5 e J4 e recebe pela esquerda. Depois do passe, ataca pela entrada (zona 4). Pela regra de sobreposição, precisa estar à frente da posição 5 (J1) e à esquerda da posição 3 (J3)."
+            },
+            "J4": {
+              "x": 82,
+              "y": 42,
+              "para": {
+                "x": 86,
+                "y": 22
+              },
+              "motivo": "Jogador 4 é a posição 2 neste rodízio. Faz parte da recepção com J2, J1, J6 e J5 e recebe pela direita. Depois do passe, ataca pela saída (zona 2). Pela regra de sobreposição, precisa estar à frente da posição 1 (J5) e à direita da posição 3 (J3)."
+            },
+            "J1": {
+              "x": 22,
+              "y": 72,
+              "para": {
+                "x": 20,
+                "y": 75
+              },
+              "motivo": "Jogador 1 é a posição 5 neste rodízio. Faz parte da recepção com J2, J6, J5 e J4 e recebe pela esquerda. Depois do passe, fica no fundo para o ataque de fundo. Pela regra de sobreposição, precisa estar atrás da posição 4 (J2) e à esquerda da posição 6 (J6)."
+            },
+            "J6": {
+              "x": 50,
+              "y": 58,
+              "para": {
+                "x": 50,
+                "y": 78
+              },
+              "motivo": "Jogador 6 é a posição 6 neste rodízio. Faz parte da recepção com J2, J1, J5 e J4 e recebe pelo meio. Depois do passe, fica no fundo para o ataque de fundo. Pela regra de sobreposição, precisa estar atrás da posição 3 (J3), à direita da posição 5 (J1) e à esquerda da posição 1 (J5)."
+            },
+            "J5": {
+              "x": 78,
+              "y": 72,
+              "para": {
+                "x": 80,
+                "y": 75
+              },
+              "motivo": "Jogador 5 é a posição 1 neste rodízio. Faz parte da recepção com J2, J1, J6 e J4 e recebe pela direita. Depois do passe, fica no fundo para o ataque de fundo. Pela regra de sobreposição, precisa estar atrás da posição 2 (J4) e à direita da posição 6 (J6)."
+            }
+          }
+        },
+        "defesa": {
+          "resumo": "Na rede: J2 na entrada, J3 no meio e J4 na saída. No fundo: J1 na 5, J6 na 6 e J5 na 1. No 6-0 ninguém troca de lado: cada um defende na zona em que está.",
+          "posicoes": {
+            "J2": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Jogador 2 defende na rede pela entrada (zona 4). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J3": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Jogador 3 defende na rede pelo meio (zona 3). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J4": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Jogador 4 defende na rede pela saída (zona 2). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J1": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Jogador 1 defende no fundo esquerda (zona 5). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J6": {
+              "x": 50,
+              "y": 85,
+              "motivo": "Jogador 6 defende no fundo meio (zona 6). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J5": {
+              "x": 80,
+              "y": 80,
+              "motivo": "Jogador 5 defende no fundo direita (zona 1). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "R4",
+      "nome": "Rodízio 4",
+      "apelido": "J2 levanta",
+      "ordem": {
+        "1": "J4",
+        "2": "J3",
+        "3": "J2",
+        "4": "J1",
+        "5": "J6",
+        "6": "J5"
+      },
+      "levantador": "J2",
+      "fases": {
+        "saque": {
+          "sacador": "J4",
+          "resumo": {
+            "antiga": "J4 saca da posição 1. Pela regra até 2024, todos respeitam a ordem do rodízio no momento do saque e trocam de lugar logo depois. No 6-0 cada um defende na zona onde está.",
+            "nova": "J4 saca da posição 1. Pela regra atual, o time que saca pode ficar em qualquer posição; o mais comum é já começar onde vai defender. No 6-0 cada um defende na zona onde está."
+          },
+          "antiga": {
+            "J4": {
+              "x": 83,
+              "y": 112,
+              "para": {
+                "x": 80,
+                "y": 80
+              },
+              "motivo": "Jogador 4 é a posição 1: é quem saca, de dentro da zona de saque. Depois do saque, entra na quadra e defende no fundo direita (zona 1)."
+            },
+            "J3": {
+              "x": 83,
+              "y": 20,
+              "para": {
+                "x": 85,
+                "y": 12
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 3 fica na zona 2. Pela regra de sobreposição, precisa estar à frente da posição 1 (J4) e à direita da posição 3 (J2). Depois do saque, vai defender na rede pela saída (zona 2)."
+            },
+            "J2": {
+              "x": 50,
+              "y": 20,
+              "para": {
+                "x": 50,
+                "y": 10
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 2 fica na zona 3. Pela regra de sobreposição, precisa estar à frente da posição 6 (J5), à direita da posição 4 (J1) e à esquerda da posição 2 (J3). Depois do saque, vai defender na rede pelo meio (zona 3)."
+            },
+            "J1": {
+              "x": 17,
+              "y": 20,
+              "para": {
+                "x": 15,
+                "y": 12
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 1 fica na zona 4. Pela regra de sobreposição, precisa estar à frente da posição 5 (J6) e à esquerda da posição 3 (J2). Depois do saque, vai defender na rede pela entrada (zona 4)."
+            },
+            "J6": {
+              "x": 17,
+              "y": 75,
+              "para": {
+                "x": 20,
+                "y": 80
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 6 fica na zona 5. Pela regra de sobreposição, precisa estar atrás da posição 4 (J1) e à esquerda da posição 6 (J5). Depois do saque, vai defender no fundo esquerda (zona 5)."
+            },
+            "J5": {
+              "x": 50,
+              "y": 75,
+              "para": {
+                "x": 50,
+                "y": 85
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 5 fica na zona 6. Pela regra de sobreposição, precisa estar atrás da posição 3 (J2), à direita da posição 5 (J6) e à esquerda da posição 1 (J4). Depois do saque, vai defender no fundo meio (zona 6)."
+            }
+          },
+          "nova": {
+            "J4": {
+              "x": 83,
+              "y": 112,
+              "para": {
+                "x": 80,
+                "y": 80
+              },
+              "motivo": "Jogador 4 é a posição 1: é quem saca, de dentro da zona de saque. Depois do saque, entra na quadra e defende no fundo direita (zona 1)."
+            },
+            "J3": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 3 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pela saída (zona 2)."
+            },
+            "J2": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 2 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pelo meio (zona 3)."
+            },
+            "J1": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 1 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pela entrada (zona 4)."
+            },
+            "J6": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 6 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: no fundo esquerda (zona 5)."
+            },
+            "J5": {
+              "x": 50,
+              "y": 85,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 5 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: no fundo meio (zona 6)."
+            }
+          }
+        },
+        "recepcao": {
+          "resumo": "Levantador da vez (J2) na 3: fica colado na rede. A recepção fica com J1, J6, J5, J4 e J3. No primeiro ataque, cada um bate pelo lado onde está: J1 pela entrada e J3 pela saída.",
+          "receptores": [
+            "J1",
+            "J6",
+            "J5",
+            "J4",
+            "J3"
+          ],
+          "posicoes": {
+            "J2": {
+              "x": 50,
+              "y": 8,
+              "para": {
+                "x": 62,
+                "y": 10
+              },
+              "motivo": "Jogador 2 é a posição 3 neste rodízio. Não recebe: fica colado na rede para chegar rápido ao ponto de levantamento, entre a 2 e a 3. Pela regra de sobreposição, precisa estar à frente da posição 6 (J5), à direita da posição 4 (J1) e à esquerda da posição 2 (J3)."
+            },
+            "J1": {
+              "x": 18,
+              "y": 42,
+              "para": {
+                "x": 15,
+                "y": 22
+              },
+              "motivo": "Jogador 1 é a posição 4 neste rodízio. Faz parte da recepção com J6, J5, J4 e J3 e recebe pela esquerda. Depois do passe, ataca pela entrada (zona 4). Pela regra de sobreposição, precisa estar à frente da posição 5 (J6) e à esquerda da posição 3 (J2)."
+            },
+            "J3": {
+              "x": 82,
+              "y": 42,
+              "para": {
+                "x": 86,
+                "y": 22
+              },
+              "motivo": "Jogador 3 é a posição 2 neste rodízio. Faz parte da recepção com J1, J6, J5 e J4 e recebe pela direita. Depois do passe, ataca pela saída (zona 2). Pela regra de sobreposição, precisa estar à frente da posição 1 (J4) e à direita da posição 3 (J2)."
+            },
+            "J6": {
+              "x": 22,
+              "y": 72,
+              "para": {
+                "x": 20,
+                "y": 75
+              },
+              "motivo": "Jogador 6 é a posição 5 neste rodízio. Faz parte da recepção com J1, J5, J4 e J3 e recebe pela esquerda. Depois do passe, fica no fundo para o ataque de fundo. Pela regra de sobreposição, precisa estar atrás da posição 4 (J1) e à esquerda da posição 6 (J5)."
+            },
+            "J5": {
+              "x": 50,
+              "y": 58,
+              "para": {
+                "x": 50,
+                "y": 78
+              },
+              "motivo": "Jogador 5 é a posição 6 neste rodízio. Faz parte da recepção com J1, J6, J4 e J3 e recebe pelo meio. Depois do passe, fica no fundo para o ataque de fundo. Pela regra de sobreposição, precisa estar atrás da posição 3 (J2), à direita da posição 5 (J6) e à esquerda da posição 1 (J4)."
+            },
+            "J4": {
+              "x": 78,
+              "y": 72,
+              "para": {
+                "x": 80,
+                "y": 75
+              },
+              "motivo": "Jogador 4 é a posição 1 neste rodízio. Faz parte da recepção com J1, J6, J5 e J3 e recebe pela direita. Depois do passe, fica no fundo para o ataque de fundo. Pela regra de sobreposição, precisa estar atrás da posição 2 (J3) e à direita da posição 6 (J5)."
+            }
+          }
+        },
+        "defesa": {
+          "resumo": "Na rede: J1 na entrada, J2 no meio e J3 na saída. No fundo: J6 na 5, J5 na 6 e J4 na 1. No 6-0 ninguém troca de lado: cada um defende na zona em que está.",
+          "posicoes": {
+            "J1": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Jogador 1 defende na rede pela entrada (zona 4). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J2": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Jogador 2 defende na rede pelo meio (zona 3). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J3": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Jogador 3 defende na rede pela saída (zona 2). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J6": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Jogador 6 defende no fundo esquerda (zona 5). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J5": {
+              "x": 50,
+              "y": 85,
+              "motivo": "Jogador 5 defende no fundo meio (zona 6). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J4": {
+              "x": 80,
+              "y": 80,
+              "motivo": "Jogador 4 defende no fundo direita (zona 1). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "R5",
+      "nome": "Rodízio 5",
+      "apelido": "J1 levanta",
+      "ordem": {
+        "1": "J3",
+        "2": "J2",
+        "3": "J1",
+        "4": "J6",
+        "5": "J5",
+        "6": "J4"
+      },
+      "levantador": "J1",
+      "fases": {
+        "saque": {
+          "sacador": "J3",
+          "resumo": {
+            "antiga": "J3 saca da posição 1. Pela regra até 2024, todos respeitam a ordem do rodízio no momento do saque e trocam de lugar logo depois. No 6-0 cada um defende na zona onde está.",
+            "nova": "J3 saca da posição 1. Pela regra atual, o time que saca pode ficar em qualquer posição; o mais comum é já começar onde vai defender. No 6-0 cada um defende na zona onde está."
+          },
+          "antiga": {
+            "J3": {
+              "x": 83,
+              "y": 112,
+              "para": {
+                "x": 80,
+                "y": 80
+              },
+              "motivo": "Jogador 3 é a posição 1: é quem saca, de dentro da zona de saque. Depois do saque, entra na quadra e defende no fundo direita (zona 1)."
+            },
+            "J2": {
+              "x": 83,
+              "y": 20,
+              "para": {
+                "x": 85,
+                "y": 12
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 2 fica na zona 2. Pela regra de sobreposição, precisa estar à frente da posição 1 (J3) e à direita da posição 3 (J1). Depois do saque, vai defender na rede pela saída (zona 2)."
+            },
+            "J1": {
+              "x": 50,
+              "y": 20,
+              "para": {
+                "x": 50,
+                "y": 10
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 1 fica na zona 3. Pela regra de sobreposição, precisa estar à frente da posição 6 (J4), à direita da posição 4 (J6) e à esquerda da posição 2 (J2). Depois do saque, vai defender na rede pelo meio (zona 3)."
+            },
+            "J6": {
+              "x": 17,
+              "y": 20,
+              "para": {
+                "x": 15,
+                "y": 12
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 6 fica na zona 4. Pela regra de sobreposição, precisa estar à frente da posição 5 (J5) e à esquerda da posição 3 (J1). Depois do saque, vai defender na rede pela entrada (zona 4)."
+            },
+            "J5": {
+              "x": 17,
+              "y": 75,
+              "para": {
+                "x": 20,
+                "y": 80
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 5 fica na zona 5. Pela regra de sobreposição, precisa estar atrás da posição 4 (J6) e à esquerda da posição 6 (J4). Depois do saque, vai defender no fundo esquerda (zona 5)."
+            },
+            "J4": {
+              "x": 50,
+              "y": 75,
+              "para": {
+                "x": 50,
+                "y": 85
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 4 fica na zona 6. Pela regra de sobreposição, precisa estar atrás da posição 3 (J1), à direita da posição 5 (J5) e à esquerda da posição 1 (J3). Depois do saque, vai defender no fundo meio (zona 6)."
+            }
+          },
+          "nova": {
+            "J3": {
+              "x": 83,
+              "y": 112,
+              "para": {
+                "x": 80,
+                "y": 80
+              },
+              "motivo": "Jogador 3 é a posição 1: é quem saca, de dentro da zona de saque. Depois do saque, entra na quadra e defende no fundo direita (zona 1)."
+            },
+            "J2": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 2 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pela saída (zona 2)."
+            },
+            "J1": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 1 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pelo meio (zona 3)."
+            },
+            "J6": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 6 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pela entrada (zona 4)."
+            },
+            "J5": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 5 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: no fundo esquerda (zona 5)."
+            },
+            "J4": {
+              "x": 50,
+              "y": 85,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 4 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: no fundo meio (zona 6)."
+            }
+          }
+        },
+        "recepcao": {
+          "resumo": "Levantador da vez (J1) na 3: fica colado na rede. A recepção fica com J6, J5, J4, J3 e J2. No primeiro ataque, cada um bate pelo lado onde está: J6 pela entrada e J2 pela saída.",
+          "receptores": [
+            "J6",
+            "J5",
+            "J4",
+            "J3",
+            "J2"
+          ],
+          "posicoes": {
+            "J1": {
+              "x": 50,
+              "y": 8,
+              "para": {
+                "x": 62,
+                "y": 10
+              },
+              "motivo": "Jogador 1 é a posição 3 neste rodízio. Não recebe: fica colado na rede para chegar rápido ao ponto de levantamento, entre a 2 e a 3. Pela regra de sobreposição, precisa estar à frente da posição 6 (J4), à direita da posição 4 (J6) e à esquerda da posição 2 (J2)."
+            },
+            "J6": {
+              "x": 18,
+              "y": 42,
+              "para": {
+                "x": 15,
+                "y": 22
+              },
+              "motivo": "Jogador 6 é a posição 4 neste rodízio. Faz parte da recepção com J5, J4, J3 e J2 e recebe pela esquerda. Depois do passe, ataca pela entrada (zona 4). Pela regra de sobreposição, precisa estar à frente da posição 5 (J5) e à esquerda da posição 3 (J1)."
+            },
+            "J2": {
+              "x": 82,
+              "y": 42,
+              "para": {
+                "x": 86,
+                "y": 22
+              },
+              "motivo": "Jogador 2 é a posição 2 neste rodízio. Faz parte da recepção com J6, J5, J4 e J3 e recebe pela direita. Depois do passe, ataca pela saída (zona 2). Pela regra de sobreposição, precisa estar à frente da posição 1 (J3) e à direita da posição 3 (J1)."
+            },
+            "J5": {
+              "x": 22,
+              "y": 72,
+              "para": {
+                "x": 20,
+                "y": 75
+              },
+              "motivo": "Jogador 5 é a posição 5 neste rodízio. Faz parte da recepção com J6, J4, J3 e J2 e recebe pela esquerda. Depois do passe, fica no fundo para o ataque de fundo. Pela regra de sobreposição, precisa estar atrás da posição 4 (J6) e à esquerda da posição 6 (J4)."
+            },
+            "J4": {
+              "x": 50,
+              "y": 58,
+              "para": {
+                "x": 50,
+                "y": 78
+              },
+              "motivo": "Jogador 4 é a posição 6 neste rodízio. Faz parte da recepção com J6, J5, J3 e J2 e recebe pelo meio. Depois do passe, fica no fundo para o ataque de fundo. Pela regra de sobreposição, precisa estar atrás da posição 3 (J1), à direita da posição 5 (J5) e à esquerda da posição 1 (J3)."
+            },
+            "J3": {
+              "x": 78,
+              "y": 72,
+              "para": {
+                "x": 80,
+                "y": 75
+              },
+              "motivo": "Jogador 3 é a posição 1 neste rodízio. Faz parte da recepção com J6, J5, J4 e J2 e recebe pela direita. Depois do passe, fica no fundo para o ataque de fundo. Pela regra de sobreposição, precisa estar atrás da posição 2 (J2) e à direita da posição 6 (J4)."
+            }
+          }
+        },
+        "defesa": {
+          "resumo": "Na rede: J6 na entrada, J1 no meio e J2 na saída. No fundo: J5 na 5, J4 na 6 e J3 na 1. No 6-0 ninguém troca de lado: cada um defende na zona em que está.",
+          "posicoes": {
+            "J6": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Jogador 6 defende na rede pela entrada (zona 4). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J1": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Jogador 1 defende na rede pelo meio (zona 3). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J2": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Jogador 2 defende na rede pela saída (zona 2). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J5": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Jogador 5 defende no fundo esquerda (zona 5). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J4": {
+              "x": 50,
+              "y": 85,
+              "motivo": "Jogador 4 defende no fundo meio (zona 6). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J3": {
+              "x": 80,
+              "y": 80,
+              "motivo": "Jogador 3 defende no fundo direita (zona 1). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "R6",
+      "nome": "Rodízio 6",
+      "apelido": "J6 levanta",
+      "ordem": {
+        "1": "J2",
+        "2": "J1",
+        "3": "J6",
+        "4": "J5",
+        "5": "J4",
+        "6": "J3"
+      },
+      "levantador": "J6",
+      "fases": {
+        "saque": {
+          "sacador": "J2",
+          "resumo": {
+            "antiga": "J2 saca da posição 1. Pela regra até 2024, todos respeitam a ordem do rodízio no momento do saque e trocam de lugar logo depois. No 6-0 cada um defende na zona onde está.",
+            "nova": "J2 saca da posição 1. Pela regra atual, o time que saca pode ficar em qualquer posição; o mais comum é já começar onde vai defender. No 6-0 cada um defende na zona onde está."
+          },
+          "antiga": {
+            "J2": {
+              "x": 83,
+              "y": 112,
+              "para": {
+                "x": 80,
+                "y": 80
+              },
+              "motivo": "Jogador 2 é a posição 1: é quem saca, de dentro da zona de saque. Depois do saque, entra na quadra e defende no fundo direita (zona 1)."
+            },
+            "J1": {
+              "x": 83,
+              "y": 20,
+              "para": {
+                "x": 85,
+                "y": 12
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 1 fica na zona 2. Pela regra de sobreposição, precisa estar à frente da posição 1 (J2) e à direita da posição 3 (J6). Depois do saque, vai defender na rede pela saída (zona 2)."
+            },
+            "J6": {
+              "x": 50,
+              "y": 20,
+              "para": {
+                "x": 50,
+                "y": 10
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 6 fica na zona 3. Pela regra de sobreposição, precisa estar à frente da posição 6 (J3), à direita da posição 4 (J5) e à esquerda da posição 2 (J1). Depois do saque, vai defender na rede pelo meio (zona 3)."
+            },
+            "J5": {
+              "x": 17,
+              "y": 20,
+              "para": {
+                "x": 15,
+                "y": 12
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 5 fica na zona 4. Pela regra de sobreposição, precisa estar à frente da posição 5 (J4) e à esquerda da posição 3 (J6). Depois do saque, vai defender na rede pela entrada (zona 4)."
+            },
+            "J4": {
+              "x": 17,
+              "y": 75,
+              "para": {
+                "x": 20,
+                "y": 80
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 4 fica na zona 5. Pela regra de sobreposição, precisa estar atrás da posição 4 (J5) e à esquerda da posição 6 (J3). Depois do saque, vai defender no fundo esquerda (zona 5)."
+            },
+            "J3": {
+              "x": 50,
+              "y": 75,
+              "para": {
+                "x": 50,
+                "y": 85
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: jogador 3 fica na zona 6. Pela regra de sobreposição, precisa estar atrás da posição 3 (J6), à direita da posição 5 (J4) e à esquerda da posição 1 (J2). Depois do saque, vai defender no fundo meio (zona 6)."
+            }
+          },
+          "nova": {
+            "J2": {
+              "x": 83,
+              "y": 112,
+              "para": {
+                "x": 80,
+                "y": 80
+              },
+              "motivo": "Jogador 2 é a posição 1: é quem saca, de dentro da zona de saque. Depois do saque, entra na quadra e defende no fundo direita (zona 1)."
+            },
+            "J1": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 1 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pela saída (zona 2)."
+            },
+            "J6": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 6 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pelo meio (zona 3)."
+            },
+            "J5": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 5 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pela entrada (zona 4)."
+            },
+            "J4": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 4 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: no fundo esquerda (zona 5)."
+            },
+            "J3": {
+              "x": 50,
+              "y": 85,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso jogador 3 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: no fundo meio (zona 6)."
+            }
+          }
+        },
+        "recepcao": {
+          "resumo": "Levantador da vez (J6) na 3: fica colado na rede. A recepção fica com J5, J4, J3, J2 e J1. No primeiro ataque, cada um bate pelo lado onde está: J5 pela entrada e J1 pela saída.",
+          "receptores": [
+            "J5",
+            "J4",
+            "J3",
+            "J2",
+            "J1"
+          ],
+          "posicoes": {
+            "J6": {
+              "x": 50,
+              "y": 8,
+              "para": {
+                "x": 62,
+                "y": 10
+              },
+              "motivo": "Jogador 6 é a posição 3 neste rodízio. Não recebe: fica colado na rede para chegar rápido ao ponto de levantamento, entre a 2 e a 3. Pela regra de sobreposição, precisa estar à frente da posição 6 (J3), à direita da posição 4 (J5) e à esquerda da posição 2 (J1)."
+            },
+            "J5": {
+              "x": 18,
+              "y": 42,
+              "para": {
+                "x": 15,
+                "y": 22
+              },
+              "motivo": "Jogador 5 é a posição 4 neste rodízio. Faz parte da recepção com J4, J3, J2 e J1 e recebe pela esquerda. Depois do passe, ataca pela entrada (zona 4). Pela regra de sobreposição, precisa estar à frente da posição 5 (J4) e à esquerda da posição 3 (J6)."
+            },
+            "J1": {
+              "x": 82,
+              "y": 42,
+              "para": {
+                "x": 86,
+                "y": 22
+              },
+              "motivo": "Jogador 1 é a posição 2 neste rodízio. Faz parte da recepção com J5, J4, J3 e J2 e recebe pela direita. Depois do passe, ataca pela saída (zona 2). Pela regra de sobreposição, precisa estar à frente da posição 1 (J2) e à direita da posição 3 (J6)."
+            },
+            "J4": {
+              "x": 22,
+              "y": 72,
+              "para": {
+                "x": 20,
+                "y": 75
+              },
+              "motivo": "Jogador 4 é a posição 5 neste rodízio. Faz parte da recepção com J5, J3, J2 e J1 e recebe pela esquerda. Depois do passe, fica no fundo para o ataque de fundo. Pela regra de sobreposição, precisa estar atrás da posição 4 (J5) e à esquerda da posição 6 (J3)."
+            },
+            "J3": {
+              "x": 50,
+              "y": 58,
+              "para": {
+                "x": 50,
+                "y": 78
+              },
+              "motivo": "Jogador 3 é a posição 6 neste rodízio. Faz parte da recepção com J5, J4, J2 e J1 e recebe pelo meio. Depois do passe, fica no fundo para o ataque de fundo. Pela regra de sobreposição, precisa estar atrás da posição 3 (J6), à direita da posição 5 (J4) e à esquerda da posição 1 (J2)."
+            },
+            "J2": {
+              "x": 78,
+              "y": 72,
+              "para": {
+                "x": 80,
+                "y": 75
+              },
+              "motivo": "Jogador 2 é a posição 1 neste rodízio. Faz parte da recepção com J5, J4, J3 e J1 e recebe pela direita. Depois do passe, fica no fundo para o ataque de fundo. Pela regra de sobreposição, precisa estar atrás da posição 2 (J1) e à direita da posição 6 (J3)."
+            }
+          }
+        },
+        "defesa": {
+          "resumo": "Na rede: J5 na entrada, J6 no meio e J1 na saída. No fundo: J4 na 5, J3 na 6 e J2 na 1. No 6-0 ninguém troca de lado: cada um defende na zona em que está.",
+          "posicoes": {
+            "J5": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Jogador 5 defende na rede pela entrada (zona 4). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J6": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Jogador 6 defende na rede pelo meio (zona 3). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J1": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Jogador 1 defende na rede pela saída (zona 2). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J4": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Jogador 4 defende no fundo esquerda (zona 5). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J3": {
+              "x": 50,
+              "y": 85,
+              "motivo": "Jogador 3 defende no fundo meio (zona 6). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            },
+            "J2": {
+              "x": 80,
+              "y": 80,
+              "motivo": "Jogador 2 defende no fundo direita (zona 1). No 6-0 ninguém tem posição fixa: cada um defende na zona em que está. Depois do saque não existe mais regra de sobreposição."
+            }
+          }
+        }
+      }
+    }
+  ]
+}

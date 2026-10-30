@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Vôlei Help</title>
+<meta name="description" content="Aprenda e treine os rodízios do vôlei: fundamentos, sistemas 5-1, 4-2 e 6-0, quiz e prancheta.">
+<meta name="theme-color" content="#1d2f63">
+<link rel="icon" href="assets/logos/volei-help-favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/logos/volei-help-icone.svg">
+<link rel="stylesheet" href="css/tokens.css?v=20261021-5">
+<link rel="stylesheet" href="css/style.css?v=20261021-5">
+</head>
+<body class="na-inicio">
+
+<!-- barra superior das seções: logo (volta ao início) e, no computador, as seções -->
+<header class="vh-topo">
+  <a href="#inicio" class="logo-link" aria-label="Vôlei Help, ir para o início"><img src="assets/logos/volei-help-logo-negativo.svg" alt="Vôlei Help"></a>
+  <nav class="topo-nav menu" aria-label="Seções">
+    <button data-view="fundamentos"><svg class="ico" viewBox="0 0 24 24"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5z"/><path d="M5 19.5A1.5 1.5 0 0 0 6.5 21H19M9 8h6M9 11.5h4"/></svg>Fundamentos</button>
+    <button data-view="sistemas"><svg class="ico" viewBox="0 0 24 24"><path d="M19.5 12a7.5 7.5 0 0 1-12.9 5.2"/><path d="M4.5 12a7.5 7.5 0 0 1 12.9-5.2"/><path d="M17.6 3.3v3.6H14"/><path d="M6.4 20.7v-3.6H10"/><circle cx="12" cy="9.6" r="1.2"/><circle cx="9.4" cy="14" r="1.2"/><circle cx="14.6" cy="14" r="1.2"/></svg>Sistemas</button>
+    <button data-view="treino"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="7" width="13" height="14" rx="2"/><path d="M8 3h11a2 2 0 0 1 2 2v12"/><path d="m6.6 14.2 2.2 2.2 4.2-4.6"/></svg>Quiz</button>
+    <button data-view="prancheta"><svg class="ico" viewBox="0 0 24 24"><path d="M8.5 4.5H6.5A1.5 1.5 0 0 0 5 6v14a1.5 1.5 0 0 0 1.5 1.5h11A1.5 1.5 0 0 0 19 20V6a1.5 1.5 0 0 0-1.5-1.5h-2"/><rect x="8.5" y="2.5" width="7" height="4" rx="1"/><path d="m8.3 10.3 2.4 2.4m0-2.4-2.4 2.4"/><circle cx="15.2" cy="17.4" r="1.5"/><path d="M11.4 13.6l2.4 2.4"/></svg>Prancheta</button>
+  </nav>
+</header>
+
+<main>
+  <!-- ===== INÍCIO ===== -->
+  <div class="view" id="v-inicio" hidden>
+    <section class="inicio">
+      <div class="inicio-hero">
+        <img src="assets/logos/volei-help-logo-negativo.svg" alt="Vôlei Help" class="inicio-logo">
+        <p class="slogan">Entenda o rodízio, saiba onde ficar em cada jogada e treine até virar automático.</p>
+      </div>
+      <div class="cards-inicio">
+        <button class="card-secao" data-ir="fundamentos">
+          <span class="ico-box"><svg class="ico" viewBox="0 0 24 24"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5z"/><path d="M5 19.5A1.5 1.5 0 0 0 6.5 21H19M9 8h6M9 11.5h4"/></svg></span>
+          <span><h2>Fundamentos</h2><p>Numeração da quadra, rotação, sobreposição e funções.</p></span><svg class="ico seta-card" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        </button>
+        <button class="card-secao" data-ir="sistemas">
+          <span class="ico-box"><svg class="ico" viewBox="0 0 24 24"><path d="M19.5 12a7.5 7.5 0 0 1-12.9 5.2"/><path d="M4.5 12a7.5 7.5 0 0 1 12.9-5.2"/><path d="M17.6 3.3v3.6H14"/><path d="M6.4 20.7v-3.6H10"/><circle cx="12" cy="9.6" r="1.2"/><circle cx="9.4" cy="14" r="1.2"/><circle cx="14.6" cy="14" r="1.2"/></svg></span>
+          <span><h2>Sistemas</h2><p>5-1, 4-2 e 6-0: onde cada um fica em cada rodízio, e por quê.</p></span><svg class="ico seta-card" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        </button>
+        <button class="card-secao" data-ir="treino">
+          <span class="ico-box"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="7" width="13" height="14" rx="2"/><path d="M8 3h11a2 2 0 0 1 2 2v12"/><path d="m6.6 14.2 2.2 2.2 4.2-4.6"/></svg></span>
+          <span><h2>Quiz</h2><p>Perguntas e montar rodízio, com revisão do que você erra.</p></span><svg class="ico seta-card" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        </button>
+        <button class="card-secao" data-ir="prancheta">
+          <span class="ico-box"><svg class="ico" viewBox="0 0 24 24"><path d="M8.5 4.5H6.5A1.5 1.5 0 0 0 5 6v14a1.5 1.5 0 0 0 1.5 1.5h11A1.5 1.5 0 0 0 19 20V6a1.5 1.5 0 0 0-1.5-1.5h-2"/><rect x="8.5" y="2.5" width="7" height="4" rx="1"/><path d="m8.3 10.3 2.4 2.4m0-2.4-2.4 2.4"/><circle cx="15.2" cy="17.4" r="1.5"/><path d="M11.4 13.6l2.4 2.4"/></svg></span>
+          <span><h2>Prancheta</h2><p>Posicione os jogadores e desenhe as jogadas do seu time.</p></span><svg class="ico seta-card" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== FUNDAMENTOS ===== -->
+  <div class="view" id="v-fundamentos" hidden>
+    <header class="cabecalho"><h1 class="vh-titulo">Fundamentos</h1></header>
+    <div id="f-blocos"></div>
+    <p class="fonte" id="f-fonte"></p>
+    <button class="vh-btn vh-btn--largo" id="f-treinar">Treinar fundamentos</button>
+  </div>
+
+  <!-- ===== SISTEMAS ===== -->
+  <div class="view duas-colunas" id="v-sistemas" hidden>
+    <header class="cabecalho largo">
+      <h1 class="vh-titulo">Sistemas</h1>
+      <p class="sub" id="s-sub"></p>
+    </header>
+    <div class="vh-abas vh-abas--grande largo" role="tablist" id="s-abas" style="margin-bottom:16px"></div>
+    <div class="coluna-quadra">
+      <section class="vh-quadra"><div class="momentos" id="s-momentos"></div><div id="s-quadra"></div><div class="vh-legenda" id="s-legenda"></div></section>
+      <p class="dica-toque">Toque num jogador para ver por que ele fica ali.</p>
+    </div>
+    <details class="vh-card sistema-intro" id="s-intro"></details>
+    <div class="vh-abas" role="tablist" id="s-fases"></div>
+    <div class="controles-quadra">
+      <div class="linha-ctrl"><span class="vh-rotulo">Rodízio</span><div class="vh-chips" id="s-rodizios"></div></div>
+      <div id="s-grupoVar"><div class="linha-ctrl"><span class="vh-rotulo">Variação</span><div class="vh-chips" id="s-variacoes"></div></div><p class="var-desc" id="s-varDesc"></p></div>
+      <div class="linha-ctrl"><span class="vh-rotulo">Setas</span><div class="vh-chips" id="s-setas"></div></div>
+      <div class="linha-ctrl"><span class="vh-rotulo">Eu sou</span><div class="vh-chips" id="s-minha"></div></div>
+    </div>
+    <section class="vh-card vh-card--roxo porque">
+      <p class="resumo-fase"><strong>Explicação:</strong> <span id="s-resumo"></span></p>
+      <div class="motivo" id="s-motivo" hidden></div>
+    </section>
+    <button class="vh-btn vh-btn--largo" id="s-treinar">Treinar este sistema</button>
+  </div>
+
+  <!-- ===== TREINO ===== -->
+  <div class="view" id="v-treino" hidden>
+    <header class="cabecalho"><h1 class="vh-titulo">Quiz</h1><p class="sub">Escolha o que treinar e como. O que você erra volta mais vezes.</p></header>
+
+    <section id="t-config">
+      <div class="vh-card">
+        <p class="passo-titulo"><span>1</span>O que treinar</p>
+        <div class="opcoes" id="t-temas"></div>
+      </div>
+      <div class="vh-card">
+        <p class="passo-titulo"><span>2</span>Como treinar</p>
+        <div class="opcoes" id="t-modos"></div>
+        <p class="dica" id="t-aviso" style="margin-top:10px"></p>
+      </div>
+      <div class="vh-card">
+        <p class="passo-titulo"><span>3</span>Regra do saque</p>
+        <div class="opcoes" id="t-regras"></div>
+        <p class="dica" style="margin-top:10px">Vale para as perguntas sobre onde cada um fica quando o seu time saca.</p>
+      </div>
+      <button class="vh-btn vh-btn--largo" id="t-comecar">Começar</button>
+      <div class="vh-card fracos" id="t-fracos" style="margin-top:16px"></div>
+    </section>
+
+    <section id="t-sessao" hidden>
+      <div class="treino-topo">
+        <span class="etiqueta" id="t-rotulo"></span>
+        <button class="vh-btn vh-btn--texto" id="t-trocar">Mudar escolha</button>
+      </div>
+      <div class="vh-card">
+        <div class="placar">
+          <div><strong id="p-acertos">0</strong><span>acertos</span></div>
+          <div><strong id="p-erros">0</strong><span>erros</span></div>
+          <div><strong id="p-taxa">–</strong><span>% acerto</span></div>
+          <div><strong id="p-dominio">0%</strong><span>domínio</span></div>
+        </div>
+        <div class="barra"><i id="p-barra"></i></div>
+        <small class="progresso-txt" id="p-progresso"></small>
+      </div>
+
+      <!-- perguntas -->
+      <div class="duas-colunas" id="t-perguntas" hidden>
+        <div class="coluna-quadra"><section class="vh-quadra"><div id="p-quadra"></div><div class="vh-legenda" id="p-legenda"></div></section></div>
+        <section class="vh-card">
+          <div class="etiqueta" id="p-etiqueta"></div>
+          <p class="enunciado" id="p-enunciado"></p>
+          <p class="dica" id="p-dica">Toque na zona da quadra.</p>
+        </section>
+        <section class="vh-card" id="p-resposta" hidden>
+          <div class="vh-feedback" id="p-feedback"></div>
+          <ul class="explicacao" id="p-explicacao"></ul>
+          <button id="p-proxima" class="vh-btn vh-btn--largo">Próxima</button>
+        </section>
+      </div>
+
+      <!-- montar rodízio -->
+      <div class="duas-colunas" id="t-montar" hidden>
+        <div class="coluna-quadra"><section class="vh-quadra"><div id="m-quadra"></div><div class="vh-legenda" id="m-legenda"></div></section></div>
+        <section class="vh-card">
+          <div class="etiqueta">Monte o rodízio</div>
+          <p class="enunciado" id="m-enunciado"></p>
+          <p class="dica" id="m-dica">Arraste cada bolinha para o lugar dela.</p>
+        </section>
+        <div class="vh-abas" id="m-modo" style="margin-bottom:12px">
+          <button data-modo="time" aria-selected="true">Time inteiro</button>
+          <button data-modo="minha" aria-selected="false">Só a minha posição</button>
+        </div>
+        <label class="campo" id="m-boxJogador" hidden style="margin-bottom:12px"><span class="vh-rotulo">Minha posição</span><select id="m-jogador"></select></label>
+        <div class="acoes" style="margin-bottom:12px">
+          <button id="m-verificar" class="vh-btn">Verificar</button>
+          <button id="m-novo" class="vh-btn vh-btn--contorno">Próximo</button>
+        </div>
+        <div class="vh-feedback" id="m-resultado" hidden></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== PRANCHETA ===== -->
+  <div class="view duas-colunas" id="v-prancheta" hidden>
+    <header class="cabecalho largo"><h1 class="vh-titulo">Prancheta</h1><p class="sub">Posicione os jogadores e trace as jogadas.</p></header>
+    <div class="coluna-quadra">
+      <div class="ferramentas" id="e-ferramentas">
+        <button class="vh-chip" data-ferramenta="mover" aria-pressed="true">Mover</button>
+        <button class="vh-chip" data-ferramenta="desenhar" aria-pressed="false">Tracejar</button>
+        <button class="vh-chip" id="e-desfazer">Desfazer traço</button>
+        <button class="vh-chip" id="e-limparDesenho">Apagar traços</button>
+      </div>
+      <section class="vh-quadra"><div id="e-quadra"></div><div class="vh-legenda" id="e-legenda"></div></section>
+      <button id="e-zerar" class="vh-btn vh-btn--contorno vh-btn--largo" style="margin:12px 0 16px">Começar do zero</button>
+    </div>
+    <details class="vh-card sistema-intro" id="e-intro">
+      <summary>Como funciona a prancheta</summary>
+      <h3>1. Monte a quadra</h3>
+      <p>Para partir de uma formação pronta, escolha o sistema, o rodízio e a fase em <b>Partir de um rodízio</b> e toque em <b>Carregar na quadra</b>. Para montar do seu jeito, toque em <b>Começar do zero</b>, embaixo da quadra: todos vão para o banco e os traços são apagados.</p>
+      <h3>2. Ajuste as posições</h3>
+      <p>No modo <b>Mover</b>, arraste os jogadores pela quadra ou do banco para dentro dela.</p>
+      <h3>3. Trace a jogada</h3>
+      <p>No modo <b>Tracejar</b>, desenhe com o dedo ou o mouse o caminho de cada jogador ou da bola. <b>Desfazer traço</b> apaga o último. Para apagar um traço específico, volte para <b>Mover</b>, toque nele e depois no ícone de lixeira.</p>
+      <h3>4. Salve</h3>
+      <p>Dê um nome e toque em <b>Salvar</b>. As estratégias ficam só neste aparelho e podem ser abertas de novo em <b>Minhas estratégias</b>.</p>
+    </details>
+    <section class="vh-card">
+      <span class="vh-rotulo">Partir de um rodízio</span>
+      <div class="controles">
+        <label class="campo"><span class="vh-rotulo">Sistema</span><select id="e-sistema"></select></label>
+        <label class="campo"><span class="vh-rotulo">Rodízio</span><select id="e-rodizio"></select></label>
+        <label class="campo"><span class="vh-rotulo">Fase</span><select id="e-fase"></select></label>
+      </div>
+      <button id="e-carregar" class="vh-btn vh-btn--largo" style="margin-top:12px">Carregar na quadra</button>
+    </section>
+    <section class="vh-card">
+      <span class="vh-rotulo">Minhas estratégias</span>
+      <div class="salvar-linha">
+        <input id="e-nome" class="entrada" maxlength="40" placeholder="Nome (ex.: recepção em W)" aria-label="Nome da estratégia">
+        <button id="e-salvar" class="vh-btn">Salvar</button>
+      </div>
+      <p class="dica" id="e-aviso" style="margin-top:8px" role="status"></p>
+      <div id="e-salvas"></div>
+    </section>
+  </div>
+</main>
+
+<footer class="rodape">
+  <p>Vôlei Help · ferramenta de estudo, sem vínculo com a FIVB ou a CBV.</p>
+  <p>Nenhum dado sai do seu aparelho: o progresso fica salvo só neste navegador.</p>
+</footer>
+
+<!-- celular: navegação inferior -->
+<nav class="vh-nav menu" aria-label="Seções">
+  <button data-view="fundamentos"><svg class="ico" viewBox="0 0 24 24"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5z"/><path d="M5 19.5A1.5 1.5 0 0 0 6.5 21H19M9 8h6M9 11.5h4"/></svg>Fundamentos</button>
+  <button data-view="sistemas"><svg class="ico" viewBox="0 0 24 24"><path d="M19.5 12a7.5 7.5 0 0 1-12.9 5.2"/><path d="M4.5 12a7.5 7.5 0 0 1 12.9-5.2"/><path d="M17.6 3.3v3.6H14"/><path d="M6.4 20.7v-3.6H10"/><circle cx="12" cy="9.6" r="1.2"/><circle cx="9.4" cy="14" r="1.2"/><circle cx="14.6" cy="14" r="1.2"/></svg>Sistemas</button>
+  <button data-view="treino"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="7" width="13" height="14" rx="2"/><path d="M8 3h11a2 2 0 0 1 2 2v12"/><path d="m6.6 14.2 2.2 2.2 4.2-4.6"/></svg>Quiz</button>
+  <button data-view="prancheta"><svg class="ico" viewBox="0 0 24 24"><path d="M8.5 4.5H6.5A1.5 1.5 0 0 0 5 6v14a1.5 1.5 0 0 0 1.5 1.5h11A1.5 1.5 0 0 0 19 20V6a1.5 1.5 0 0 0-1.5-1.5h-2"/><rect x="8.5" y="2.5" width="7" height="4" rx="1"/><path d="m8.3 10.3 2.4 2.4m0-2.4-2.4 2.4"/><circle cx="15.2" cy="17.4" r="1.5"/><path d="M11.4 13.6l2.4 2.4"/></svg>Prancheta</button>
+</nav>
+
+<script type="module" src="js/app.js?v=20261021-5"></script>
+</body>
+</html>

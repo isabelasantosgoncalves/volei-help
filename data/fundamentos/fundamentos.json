@@ -1,0 +1,68 @@
+{
+  "fonte": "Resumo próprio baseado nas Regras Oficiais de Voleibol FIVB 2025–2028 (edição em português da CBV): regras 7 (formação e rotação), 12.5 (barreira no saque), 13 (ataque) e 19 (líbero).",
+  "blocos": [
+    {
+      "id": "numeracao",
+      "titulo": "Numeração da quadra",
+      "interativo": "numeracao",
+      "texto": [
+        "A quadra de cada time é dividida em **seis posições**: três na rede, na zona de frente (até a linha de 3 m), e três no fundo.",
+        "A numeração começa por **quem saca**: a **1** é o fundo direita. Daí ela segue no sentido **anti-horário**: **2** frente direita, **3** frente meio, **4** frente esquerda, **5** fundo esquerda e **6** fundo meio.",
+        "Direita e esquerda são sempre de quem olha para a rede, de dentro da própria quadra.",
+        "Os três da frente (4, 3 e 2) são os **jogadores de frente** e os três de trás (5, 6 e 1), os **jogadores de fundo** (regra 7.4.1). Quem está no fundo também pode atacar, mas só saltando de trás da linha de 3 m (regra 13.2.2).",
+        "Antes de cada set, o técnico entrega a **ficha de rodízio** com a ordem dos seis titulares. Essa ordem vale o set inteiro (regra 7.3)."
+      ],
+      "dica": "Toque numa zona da quadra para ver o nome dela."
+    },
+    {
+      "id": "rotacao",
+      "titulo": "Rotação",
+      "interativo": "rotacao",
+      "texto": [
+        "Quando o time que estava recebendo ganha o rali, ele **recupera o direito de sacar** e gira **uma posição no sentido horário** (regra 7.6).",
+        "Quem estava na **2 vai para a 1** e passa a sacar; a 1 vai para a 6, a 6 para a 5, a 5 para a 4, a 4 para a 3 e a 3 para a 2.",
+        "Se o time ganha o ponto no próprio saque, ninguém gira: o mesmo jogador continua sacando.",
+        "Sacar fora da ordem é **falta de rotação** (regra 7.7): o time perde o rali e a ordem certa é restabelecida.",
+        "Depois de girar, cada um continua com a mesma função. O que muda é a posição de onde ele sai em cada rali."
+      ],
+      "dica": "Toque em \"Girar\" para ver o time rodar. As setas mostram para onde cada um vai."
+    },
+    {
+      "id": "sobreposicao",
+      "titulo": "Regra de sobreposição",
+      "interativo": "sobreposicao",
+      "texto": [
+        "No momento do saque adversário, os jogadores do **time que recebe** precisam estar na ordem do rodízio (regra 7.4). Se não estiverem, é **falta de posição**: ponto e saque para o adversário (regra 7.5).",
+        "**Frente e fundo:** só entre os pares da mesma coluna. A **2 à frente da 1**, a **3 à frente da 6** e a **4 à frente da 5**.",
+        "**Laterais:** só dentro da mesma linha. A **4 à esquerda da 3**, a **3 à esquerda da 2**, a **5 à esquerda da 6** e a **6 à esquerda da 1**.",
+        "Só vale comparar vizinhos: a 4 não precisa estar à esquerda da 2, nem a 5 atrás da 2. A posição é medida pelos **pés no chão**: o jogador da frente precisa ter pelo menos parte de um pé mais perto da rede que os dois pés do jogador de trás. Nas laterais vale o mesmo, em relação à linha lateral (regra 7.4.3).",
+        "**Quando vale:** no instante em que o sacador bate na bola.",
+        "**Depois do saque:** todos podem se mover livremente e ocupar qualquer lugar da quadra. É aí que cada um vai para a posição da sua função.",
+        "**Time que saca:** pela regra atual (Regras FIVB 2025–2028), só o time que recebe comete falta de posição; quem saca pode ficar em qualquer lugar da sua quadra. Até 2024, o time que saca também precisava respeitar a ordem.",
+        "**Mãos abaixo da cabeça:** durante o saque, nenhum jogador do time que saca pode levantar as mãos acima da cabeça até a bola passar a rede (regra 12.5.3). Isso evita a **barreira**, que esconde o sacador e a trajetória da bola de quem vai receber."
+      ],
+      "dica": "Escolha uma posição para ver com quem ela precisa se comparar."
+    },
+    {
+      "id": "funcoes",
+      "titulo": "Funções",
+      "interativo": "funcoes",
+      "funcoes": [
+        { "funcao": "levantador", "nome": "Levantador", "texto": "Faz o segundo toque e escolhe quem vai atacar. Quando está no fundo, infiltra até a rede para levantar.", "zonas": ["Levanta entre a 2 e a 3", "Defende na 1"] },
+        { "funcao": "oposto", "nome": "Oposto", "texto": "Fica sempre na posição oposta à do levantador no rodízio, na diagonal dele. É um atacante de força e quase não passa.", "zonas": ["Ataca pela saída (2) e pelo fundo (1)", "Defende na 1"] },
+        { "funcao": "ponteiro", "nome": "Ponteiro", "texto": "Atacante de bolas altas e um dos responsáveis pela recepção, junto com o líbero.", "zonas": ["Ataca pela entrada (4) e pelo fundo (6)", "Recebe", "Defende na 6"] },
+        { "funcao": "central", "nome": "Central", "texto": "Joga no meio da rede: ataca bolas rápidas e é o principal bloqueador, ajudando no bloqueio dos dois lados.", "zonas": ["Ataca e bloqueia no meio (3)", "No fundo, sai para o líbero entrar"] },
+        { "funcao": "libero", "nome": "Líbero", "texto": "Especialista em recepção e defesa, com uniforme de cor diferente. Só joga no fundo e costuma entrar no lugar do central (regra 19).", "zonas": ["Recebe pelo meio", "Defende na 5"] }
+      ],
+      "restricoes": {
+        "titulo": "O que o líbero não pode fazer (regra 19.3)",
+        "itens": [
+          "Sacar, bloquear ou tentar bloquear.",
+          "Atacar a bola quando ela está inteira acima da borda superior da rede, de qualquer lugar da quadra.",
+          "Se levantar de toque (com os dedos) na zona de frente, o atacante não pode bater essa bola acima da borda da rede.",
+          "Entra e sai sem contar como substituição, mas precisa haver um rali completo entre uma saída e uma nova entrada, e ele só pode ser trocado de volta pelo jogador que substituiu."
+        ]
+      }
+    }
+  ]
+}

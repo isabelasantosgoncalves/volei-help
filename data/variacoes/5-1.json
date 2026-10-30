@@ -1,0 +1,202 @@
+{
+  "sistema": "5-1",
+  "variacoes": [
+    {
+      "id": "empilhamento-esquerda",
+      "nome": "Empilhamento na esquerda",
+      "fase": "recepcao",
+      "descricao": "Oposto e central colados no canto esquerdo da rede. O ponteiro da 2 desce na diagonal para receber na esquerda, P2 e líbero vão para a direita cobrindo o levantador. Depois do saque, o oposto corre para a saída e o ponteiro ataca pela entrada.",
+      "rodizios": {
+        "L1": {
+          "resumo": "Levantador na 1, escondido no fundo do canto direito. Oposto e central empilhados no canto esquerdo da rede; a recepção fica com P1, P2 e líbero. Depois do saque, o oposto corre para a saída e o P1 ataca pela entrada.",
+          "posicoes": {
+            "L": {
+              "x": 94,
+              "y": 72,
+              "para": { "x": 65, "y": 10 },
+              "motivo": "Levantador é a posição 1. Fica no fundo do canto direito, coberto pelo P2 e pelo líbero, e infiltra para levantar. Pela regra de sobreposição, precisa estar atrás da posição 2 (P1) e à direita da posição 6 (LI)."
+            },
+            "P1": {
+              "x": 27,
+              "y": 56,
+              "para": { "x": 12, "y": 22 },
+              "motivo": "Ponteiro 1 é a posição 2. Sai da posição 2 e desce na diagonal para receber pela esquerda. Assim, depois do passe, ataca pela entrada (zona 4), que é o seu lado. Pela regra de sobreposição, precisa estar à frente da posição 1 (L) e à direita da posição 3 (C1)."
+            },
+            "C1": {
+              "x": 17,
+              "y": 12,
+              "para": { "x": 50, "y": 18 },
+              "motivo": "Central 1 é a posição 3. Fica colado no canto esquerdo da rede, junto do oposto, para abrir espaço para a recepção. Depois do saque vai para o meio. Pela regra de sobreposição, precisa estar à frente da posição 6 (LI), à direita da posição 4 (OP) e à esquerda da posição 2 (P1)."
+            },
+            "OP": {
+              "x": 5,
+              "y": 8,
+              "para": { "x": 88, "y": 22 },
+              "motivo": "Oposto é a posição 4. Fica colado no canto esquerdo da rede. Depois do saque, corre até a saída (zona 2) para atacar. Pela regra de sobreposição, precisa estar à frente da posição 5 (P2) e à esquerda da posição 3 (C1)."
+            },
+            "P2": {
+              "x": 50,
+              "y": 66,
+              "para": { "x": 50, "y": 65 },
+              "motivo": "Ponteiro 2 é a posição 5. Desloca para a direita e recebe pelo meio, ajudando a cobrir o levantador. Pela regra de sobreposição, precisa estar atrás da posição 4 (OP) e à esquerda da posição 6 (LI)."
+            },
+            "LI": {
+              "x": 80,
+              "y": 64,
+              "para": { "x": 20, "y": 75 },
+              "motivo": "Líbero é a posição 6. Desloca para a direita e recebe por lá, cobrindo o levantador que está no fundo. Pela regra de sobreposição, precisa estar atrás da posição 3 (C1), à direita da posição 5 (P2) e à esquerda da posição 1 (L)."
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "libero-na-6",
+      "nome": "Líbero na 6",
+      "fase": "defesa",
+      "descricao": "Na defesa, o líbero fica no fundo meio (zona 6) e o ponteiro do fundo vai para a 5.",
+      "rodizios": {
+        "L1": {
+          "resumo": "Na rede: P1 na entrada, C1 no meio e OP na saída. No fundo: P2 na 5, LI na 6 e L na 1. Cada um defende no lugar da sua função.",
+          "posicoes": {
+            "OP": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Oposto defende na rede pela saída (zona 2): o oposto bloqueia o ataque de entrada do adversário pela saída. Depois do saque não existe mais regra de sobreposição."
+            },
+            "C1": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Central 1 defende na rede pelo meio (zona 3): o central bloqueia pelo meio. Depois do saque não existe mais regra de sobreposição."
+            },
+            "P1": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Ponteiro 1 defende na rede pela entrada (zona 4): é o lugar do ponteiro, que bloqueia e ataca pela entrada. Depois do saque não existe mais regra de sobreposição."
+            },
+            "P2": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Ponteiro 2 defende no fundo esquerda (zona 5), onde chegam as bolas cruzadas. Depois do saque não existe regra de sobreposição."
+            },
+            "LI": {
+              "x": 50,
+              "y": 85,
+              "motivo": "O líbero defende no fundo meio (zona 6), de onde alcança as bolas longas e as largadas atrás do bloqueio. Depois do saque não existe regra de sobreposição."
+            },
+            "L": {
+              "x": 80,
+              "y": 80,
+              "motivo": "Levantador defende no fundo direita (zona 1): o levantador do fundo defende na 1 para sair rápido e levantar. Depois do saque não existe mais regra de sobreposição."
+            }
+          }
+        },
+        "L6": {
+          "resumo": "Na rede: P2 na entrada, C1 no meio e OP na saída. No fundo: P1 na 5, LI na 6 e L na 1. Cada um defende no lugar da sua função.",
+          "posicoes": {
+            "P2": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Ponteiro 2 defende na rede pela entrada (zona 4): é o lugar do ponteiro, que bloqueia e ataca pela entrada. Depois do saque não existe mais regra de sobreposição."
+            },
+            "OP": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Oposto defende na rede pela saída (zona 2): o oposto bloqueia o ataque de entrada do adversário pela saída. Depois do saque não existe mais regra de sobreposição."
+            },
+            "C1": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Central 1 defende na rede pelo meio (zona 3): o central bloqueia pelo meio. Depois do saque não existe mais regra de sobreposição."
+            },
+            "LI": {
+              "x": 50,
+              "y": 85,
+              "motivo": "O líbero defende no fundo meio (zona 6), de onde alcança as bolas longas e as largadas atrás do bloqueio. Depois do saque não existe regra de sobreposição."
+            },
+            "L": {
+              "x": 80,
+              "y": 80,
+              "motivo": "Levantador defende no fundo direita (zona 1): o levantador do fundo defende na 1 para sair rápido e levantar. Depois do saque não existe mais regra de sobreposição."
+            },
+            "P1": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Ponteiro 1 defende no fundo esquerda (zona 5), onde chegam as bolas cruzadas. Depois do saque não existe regra de sobreposição."
+            }
+          }
+        },
+        "L4": {
+          "resumo": "Na rede: P2 na entrada, C2 no meio e L na saída. No fundo: P1 na 5, LI na 6 e OP na 1. Cada um defende no lugar da sua função.",
+          "posicoes": {
+            "L": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Levantador defende na rede pela saída (zona 2): o levantador da rede bloqueia pela saída e fica perto do ponto de levantamento. Depois do saque não existe mais regra de sobreposição."
+            },
+            "C2": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Central 2 defende na rede pelo meio (zona 3): o central bloqueia pelo meio. Depois do saque não existe mais regra de sobreposição."
+            },
+            "P2": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Ponteiro 2 defende na rede pela entrada (zona 4): é o lugar do ponteiro, que bloqueia e ataca pela entrada. Depois do saque não existe mais regra de sobreposição."
+            },
+            "P1": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Ponteiro 1 defende no fundo esquerda (zona 5), onde chegam as bolas cruzadas. Depois do saque não existe regra de sobreposição."
+            },
+            "LI": {
+              "x": 50,
+              "y": 85,
+              "motivo": "O líbero defende no fundo meio (zona 6), de onde alcança as bolas longas e as largadas atrás do bloqueio. Depois do saque não existe regra de sobreposição."
+            },
+            "OP": {
+              "x": 80,
+              "y": 80,
+              "motivo": "Oposto defende no fundo direita (zona 1): o oposto do fundo defende na 1, do lado onde ataca. Depois do saque não existe mais regra de sobreposição."
+            }
+          }
+        },
+        "L3": {
+          "resumo": "Na rede: P1 na entrada, C2 no meio e L na saída. No fundo: P2 na 5, LI na 6 e OP na 1. Cada um defende no lugar da sua função.",
+          "posicoes": {
+            "P1": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Ponteiro 1 defende na rede pela entrada (zona 4): é o lugar do ponteiro, que bloqueia e ataca pela entrada. Depois do saque não existe mais regra de sobreposição."
+            },
+            "L": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Levantador defende na rede pela saída (zona 2): o levantador da rede bloqueia pela saída e fica perto do ponto de levantamento. Depois do saque não existe mais regra de sobreposição."
+            },
+            "C2": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Central 2 defende na rede pelo meio (zona 3): o central bloqueia pelo meio. Depois do saque não existe mais regra de sobreposição."
+            },
+            "LI": {
+              "x": 50,
+              "y": 85,
+              "motivo": "O líbero defende no fundo meio (zona 6), de onde alcança as bolas longas e as largadas atrás do bloqueio. Depois do saque não existe regra de sobreposição."
+            },
+            "OP": {
+              "x": 80,
+              "y": 80,
+              "motivo": "Oposto defende no fundo direita (zona 1): o oposto do fundo defende na 1, do lado onde ataca. Depois do saque não existe mais regra de sobreposição."
+            },
+            "P2": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Ponteiro 2 defende no fundo esquerda (zona 5), onde chegam as bolas cruzadas. Depois do saque não existe regra de sobreposição."
+            }
+          }
+        }
+      }
+    }
+  ]
+}

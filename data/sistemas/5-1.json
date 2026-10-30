@@ -1,0 +1,1361 @@
+{
+  "id": "5-1",
+  "nome": "Sistema 5-1",
+  "versao": 2,
+  "descricao": {
+    "resumo": "Um levantador só, que levanta nos seis rodízios, e cinco atacantes: um oposto, dois ponteiros e dois centrais. Com o líbero, é o sistema usado pela maioria das equipes adultas e de alto nível.",
+    "secoes": [
+      {
+        "titulo": "Quem é quem",
+        "texto": "No rodízio, cada função tem um par na diagonal, a três posições de distância: levantador e oposto, ponteiro 1 e ponteiro 2, central 1 e central 2. Assim, quando um do par está na rede, o outro está no fundo, e cada linha sempre tem um jogador de cada função."
+      },
+      {
+        "titulo": "Quem levanta",
+        "texto": "O levantador levanta em todos os rodízios. Quando está na rede (posições 4, 3 ou 2), já está perto do ponto de levantamento, entre a 2 e a 3, mas o time tem só dois atacantes de frente. Quando está no fundo (posições 1, 6 ou 5), ele infiltra: corre até a rede assim que o adversário saca, e o time ganha três atacantes de frente."
+      },
+      {
+        "titulo": "Na recepção",
+        "texto": "Recebem os dois ponteiros e o líbero, que entra no lugar do central que está no fundo. O levantador, o oposto e o central de frente ficam fora da linha de passe. Mesmo escondidos, todos precisam respeitar a regra de sobreposição até o adversário bater na bola."
+      },
+      {
+        "titulo": "Depois do saque",
+        "texto": "Com a bola em jogo, cada um vai para o lugar da sua função. Na rede: ponteiro na entrada (4), central no meio (3) e oposto ou levantador na saída (2). No fundo: levantador ou oposto na 1, ponteiro na 6 e líbero na 5."
+      },
+      {
+        "titulo": "Vantagens",
+        "texto": "Um só levantador dá ritmo e entrosamento ao ataque, e cada jogador se especializa na sua função."
+      },
+      {
+        "titulo": "Cuidados",
+        "texto": "É o sistema com mais trocas de lugar: cada jogador precisa saber onde ficar em cada rodízio para não cometer falta de posição na recepção."
+      }
+    ]
+  },
+  "coordenadas": {
+    "x": "0 = linha lateral esquerda, 100 = linha lateral direita (olhando para a rede)",
+    "y": "0 = rede, 100 = linha de fundo, acima de 100 = zona de saque"
+  },
+  "regraSaquePadrao": "nova",
+  "regrasSaque": {
+    "nova": {
+      "nome": "Regra atual",
+      "curto": "Atual (desde 2025)",
+      "descricao": "Desde 2025 (Regras Oficiais FIVB 2025–2028, regra 7.4), só o time que recebe precisa estar na ordem do rodízio no momento do saque; os jogadores do time que saca podem ocupar qualquer lugar da sua quadra (o sacador na zona de saque)."
+    },
+    "antiga": {
+      "nome": "Regra até 2024",
+      "curto": "Até 2024",
+      "descricao": "Até 2024, no momento do saque, o time que saca também precisava respeitar a ordem do rodízio (frente/fundo e esquerda/direita)."
+    }
+  },
+  "jogadores": {
+    "L": {
+      "nome": "Levantador",
+      "funcao": "levantador"
+    },
+    "OP": {
+      "nome": "Oposto",
+      "funcao": "oposto"
+    },
+    "P1": {
+      "nome": "Ponteiro 1",
+      "funcao": "ponteiro"
+    },
+    "P2": {
+      "nome": "Ponteiro 2",
+      "funcao": "ponteiro"
+    },
+    "C1": {
+      "nome": "Central 1",
+      "funcao": "central"
+    },
+    "C2": {
+      "nome": "Central 2",
+      "funcao": "central"
+    },
+    "LI": {
+      "nome": "Líbero",
+      "funcao": "libero"
+    }
+  },
+  "rodizios": [
+    {
+      "id": "L1",
+      "nome": "L em P1",
+      "apelido": "Levantador sacando",
+      "ordem": {
+        "1": "L",
+        "2": "P1",
+        "3": "C1",
+        "4": "OP",
+        "5": "P2",
+        "6": "C2"
+      },
+      "fases": {
+        "saque": {
+          "sacador": "L",
+          "resumo": {
+            "antiga": "L saca da posição 1. Pela regra até 2024, todos respeitam a ordem do rodízio no momento do saque e trocam de lugar logo depois. Depois do saque, cada um vai para a posição da sua função.",
+            "nova": "L saca da posição 1. Pela regra atual, o time que saca pode ficar em qualquer posição; o mais comum é já começar onde vai defender. Depois do saque, cada um vai para a posição da sua função."
+          },
+          "antiga": {
+            "L": {
+              "x": 83,
+              "y": 112,
+              "para": {
+                "x": 80,
+                "y": 80
+              },
+              "motivo": "Levantador é a posição 1: é quem saca, de dentro da zona de saque. Depois do saque, entra na quadra e defende no fundo direita (zona 1)."
+            },
+            "P1": {
+              "x": 83,
+              "y": 20,
+              "para": {
+                "x": 15,
+                "y": 12
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: ponteiro 1 fica na zona 2. Pela regra de sobreposição, precisa estar à frente da posição 1 (L) e à direita da posição 3 (C1). Depois do saque, vai defender na rede pela entrada (zona 4)."
+            },
+            "C1": {
+              "x": 50,
+              "y": 20,
+              "para": {
+                "x": 50,
+                "y": 10
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: central 1 fica na zona 3. Pela regra de sobreposição, precisa estar à frente da posição 6 (LI), à direita da posição 4 (OP) e à esquerda da posição 2 (P1). Depois do saque, vai defender na rede pelo meio (zona 3)."
+            },
+            "OP": {
+              "x": 17,
+              "y": 20,
+              "para": {
+                "x": 85,
+                "y": 12
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: oposto fica na zona 4. Pela regra de sobreposição, precisa estar à frente da posição 5 (P2) e à esquerda da posição 3 (C1). Depois do saque, vai defender na rede pela saída (zona 2)."
+            },
+            "P2": {
+              "x": 17,
+              "y": 75,
+              "para": {
+                "x": 50,
+                "y": 85
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: ponteiro 2 fica na zona 5. Pela regra de sobreposição, precisa estar atrás da posição 4 (OP) e à esquerda da posição 6 (LI). Depois do saque, vai defender no fundo meio (zona 6)."
+            },
+            "LI": {
+              "x": 50,
+              "y": 75,
+              "para": {
+                "x": 20,
+                "y": 80
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: líbero fica na zona 6. Pela regra de sobreposição, precisa estar atrás da posição 3 (C1), à direita da posição 5 (P2) e à esquerda da posição 1 (L). Depois do saque, vai defender no fundo esquerda (zona 5)."
+            }
+          },
+          "nova": {
+            "L": {
+              "x": 83,
+              "y": 112,
+              "para": {
+                "x": 80,
+                "y": 80
+              },
+              "motivo": "Levantador é a posição 1: é quem saca, de dentro da zona de saque. Depois do saque, entra na quadra e defende no fundo direita (zona 1)."
+            },
+            "P1": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso ponteiro 1 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pela entrada (zona 4)."
+            },
+            "C1": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso central 1 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pelo meio (zona 3)."
+            },
+            "OP": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso oposto pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pela saída (zona 2)."
+            },
+            "P2": {
+              "x": 50,
+              "y": 85,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso ponteiro 2 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: no fundo meio (zona 6)."
+            },
+            "LI": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso líbero pode ficar em qualquer posição; o mais comum é já começar onde vai defender: no fundo esquerda (zona 5)."
+            }
+          }
+        },
+        "recepcao": {
+          "resumo": "Levantador na 1: fica escondido no fundo e infiltra para levantar. A recepção fica com P2, LI e P1. No primeiro ataque, cada um bate pelo lado onde está: OP pela entrada e P1 pela saída.",
+          "receptores": [
+            "P2",
+            "LI",
+            "P1"
+          ],
+          "posicoes": {
+            "L": {
+              "x": 92,
+              "y": 64,
+              "para": {
+                "x": 65,
+                "y": 10
+              },
+              "motivo": "Levantador é a posição 1 neste rodízio. Não recebe: fica escondido no fundo, fora da linha de passe, e infiltra para levantar entre a 2 e a 3. Pela regra de sobreposição, precisa estar atrás da posição 2 (P1) e à direita da posição 6 (LI)."
+            },
+            "P1": {
+              "x": 78,
+              "y": 58,
+              "para": {
+                "x": 88,
+                "y": 22
+              },
+              "motivo": "Ponteiro 1 é a posição 2 neste rodízio. Faz parte da recepção com P2 e LI e recebe pela direita. Depois do passe, ataca pela saída (zona 2). Pela regra de sobreposição, precisa estar à frente da posição 1 (L) e à direita da posição 3 (C1)."
+            },
+            "C1": {
+              "x": 50,
+              "y": 15,
+              "para": {
+                "x": 50,
+                "y": 18
+              },
+              "motivo": "Central 1 é a posição 3 neste rodízio. Não recebe: fica junto à rede, pronto para a bola rápida pelo meio. Pela regra de sobreposição, precisa estar à frente da posição 6 (LI), à direita da posição 4 (OP) e à esquerda da posição 2 (P1)."
+            },
+            "OP": {
+              "x": 15,
+              "y": 20,
+              "para": {
+                "x": 12,
+                "y": 22
+              },
+              "motivo": "Oposto é a posição 4 neste rodízio. Não recebe: fica junto à rede e, no primeiro ataque, bate pela entrada (zona 4), sem cruzar a quadra. Pela regra de sobreposição, precisa estar à frente da posição 5 (P2) e à esquerda da posição 3 (C1)."
+            },
+            "P2": {
+              "x": 22,
+              "y": 62,
+              "para": {
+                "x": 50,
+                "y": 65
+              },
+              "motivo": "Ponteiro 2 é a posição 5 neste rodízio. Faz parte da recepção com LI e P1 e recebe pela esquerda. Depois do passe, fica no fundo para o ataque de fundo. Pela regra de sobreposição, precisa estar atrás da posição 4 (OP) e à esquerda da posição 6 (LI)."
+            },
+            "LI": {
+              "x": 50,
+              "y": 66,
+              "para": {
+                "x": 20,
+                "y": 75
+              },
+              "motivo": "Líbero é a posição 6 neste rodízio. Entra no lugar do central que foi para o fundo e é o principal passador: recebe pelo meio. Pela regra de sobreposição, precisa estar atrás da posição 3 (C1), à direita da posição 5 (P2) e à esquerda da posição 1 (L)."
+            }
+          }
+        },
+        "defesa": {
+          "resumo": "Na rede: P1 na entrada, C1 no meio e OP na saída. No fundo: LI na 5, P2 na 6 e L na 1. Cada um defende no lugar da sua função.",
+          "posicoes": {
+            "OP": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Oposto defende na rede pela saída (zona 2): o oposto bloqueia o ataque de entrada do adversário pela saída. Depois do saque não existe mais regra de sobreposição."
+            },
+            "C1": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Central 1 defende na rede pelo meio (zona 3): o central bloqueia pelo meio. Depois do saque não existe mais regra de sobreposição."
+            },
+            "P1": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Ponteiro 1 defende na rede pela entrada (zona 4): é o lugar do ponteiro, que bloqueia e ataca pela entrada. Depois do saque não existe mais regra de sobreposição."
+            },
+            "P2": {
+              "x": 50,
+              "y": 85,
+              "motivo": "Ponteiro 2 defende no fundo meio (zona 6): o ponteiro do fundo cobre o meio e as bolas longas. Depois do saque não existe mais regra de sobreposição."
+            },
+            "LI": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Líbero defende no fundo esquerda (zona 5): o líbero defende na 5, onde vai a maioria das bolas cruzadas. Depois do saque não existe mais regra de sobreposição."
+            },
+            "L": {
+              "x": 80,
+              "y": 80,
+              "motivo": "Levantador defende no fundo direita (zona 1): o levantador do fundo defende na 1 para sair rápido e levantar. Depois do saque não existe mais regra de sobreposição."
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "L6",
+      "nome": "L em P6",
+      "apelido": "Levantador no meio do fundo",
+      "ordem": {
+        "1": "P1",
+        "2": "C1",
+        "3": "OP",
+        "4": "P2",
+        "5": "C2",
+        "6": "L"
+      },
+      "fases": {
+        "saque": {
+          "sacador": "P1",
+          "resumo": {
+            "antiga": "P1 saca da posição 1. Pela regra até 2024, todos respeitam a ordem do rodízio no momento do saque e trocam de lugar logo depois. Depois do saque, cada um vai para a posição da sua função.",
+            "nova": "P1 saca da posição 1. Pela regra atual, o time que saca pode ficar em qualquer posição; o mais comum é já começar onde vai defender. Depois do saque, cada um vai para a posição da sua função."
+          },
+          "antiga": {
+            "P1": {
+              "x": 83,
+              "y": 112,
+              "para": {
+                "x": 50,
+                "y": 85
+              },
+              "motivo": "Ponteiro 1 é a posição 1: é quem saca, de dentro da zona de saque. Depois do saque, entra na quadra e defende no fundo meio (zona 6)."
+            },
+            "C1": {
+              "x": 83,
+              "y": 20,
+              "para": {
+                "x": 50,
+                "y": 10
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: central 1 fica na zona 2. Pela regra de sobreposição, precisa estar à frente da posição 1 (P1) e à direita da posição 3 (OP). Depois do saque, vai defender na rede pelo meio (zona 3)."
+            },
+            "OP": {
+              "x": 50,
+              "y": 20,
+              "para": {
+                "x": 85,
+                "y": 12
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: oposto fica na zona 3. Pela regra de sobreposição, precisa estar à frente da posição 6 (L), à direita da posição 4 (P2) e à esquerda da posição 2 (C1). Depois do saque, vai defender na rede pela saída (zona 2)."
+            },
+            "P2": {
+              "x": 17,
+              "y": 20,
+              "para": {
+                "x": 15,
+                "y": 12
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: ponteiro 2 fica na zona 4. Pela regra de sobreposição, precisa estar à frente da posição 5 (LI) e à esquerda da posição 3 (OP). Depois do saque, vai defender na rede pela entrada (zona 4)."
+            },
+            "LI": {
+              "x": 17,
+              "y": 75,
+              "para": {
+                "x": 20,
+                "y": 80
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: líbero fica na zona 5. Pela regra de sobreposição, precisa estar atrás da posição 4 (P2) e à esquerda da posição 6 (L). Depois do saque, vai defender no fundo esquerda (zona 5)."
+            },
+            "L": {
+              "x": 50,
+              "y": 75,
+              "para": {
+                "x": 80,
+                "y": 80
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: levantador fica na zona 6. Pela regra de sobreposição, precisa estar atrás da posição 3 (OP), à direita da posição 5 (LI) e à esquerda da posição 1 (P1). Depois do saque, vai defender no fundo direita (zona 1)."
+            }
+          },
+          "nova": {
+            "P1": {
+              "x": 83,
+              "y": 112,
+              "para": {
+                "x": 50,
+                "y": 85
+              },
+              "motivo": "Ponteiro 1 é a posição 1: é quem saca, de dentro da zona de saque. Depois do saque, entra na quadra e defende no fundo meio (zona 6)."
+            },
+            "C1": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso central 1 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pelo meio (zona 3)."
+            },
+            "OP": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso oposto pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pela saída (zona 2)."
+            },
+            "P2": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso ponteiro 2 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pela entrada (zona 4)."
+            },
+            "LI": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso líbero pode ficar em qualquer posição; o mais comum é já começar onde vai defender: no fundo esquerda (zona 5)."
+            },
+            "L": {
+              "x": 80,
+              "y": 80,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso levantador pode ficar em qualquer posição; o mais comum é já começar onde vai defender: no fundo direita (zona 1)."
+            }
+          }
+        },
+        "recepcao": {
+          "resumo": "Levantador na 6: fica escondido no fundo e infiltra para levantar. A recepção fica com P2, LI e P1. No primeiro ataque, cada um bate pelo lado onde está: OP pela saída e P2 pela entrada.",
+          "receptores": [
+            "P2",
+            "LI",
+            "P1"
+          ],
+          "posicoes": {
+            "L": {
+              "x": 62,
+              "y": 40,
+              "para": {
+                "x": 65,
+                "y": 10
+              },
+              "motivo": "Levantador é a posição 6 neste rodízio. Não recebe: fica escondido no fundo, fora da linha de passe, e infiltra para levantar entre a 2 e a 3. Pela regra de sobreposição, precisa estar atrás da posição 3 (OP), à direita da posição 5 (LI) e à esquerda da posição 1 (P1)."
+            },
+            "P1": {
+              "x": 80,
+              "y": 64,
+              "para": {
+                "x": 50,
+                "y": 65
+              },
+              "motivo": "Ponteiro 1 é a posição 1 neste rodízio. Faz parte da recepção com P2 e LI e recebe pela direita. Depois do passe, fica no fundo para o ataque de fundo. Pela regra de sobreposição, precisa estar atrás da posição 2 (C1) e à direita da posição 6 (L)."
+            },
+            "C1": {
+              "x": 88,
+              "y": 14,
+              "para": {
+                "x": 50,
+                "y": 18
+              },
+              "motivo": "Central 1 é a posição 2 neste rodízio. Não recebe: fica junto à rede, pronto para a bola rápida pelo meio. Pela regra de sobreposição, precisa estar à frente da posição 1 (P1) e à direita da posição 3 (OP)."
+            },
+            "OP": {
+              "x": 60,
+              "y": 14,
+              "para": {
+                "x": 88,
+                "y": 22
+              },
+              "motivo": "Oposto é a posição 3 neste rodízio. Não recebe: fica junto à rede e, no primeiro ataque, bate pela saída (zona 2), sem cruzar a quadra. Pela regra de sobreposição, precisa estar à frente da posição 6 (L), à direita da posição 4 (P2) e à esquerda da posição 2 (C1)."
+            },
+            "P2": {
+              "x": 15,
+              "y": 58,
+              "para": {
+                "x": 12,
+                "y": 22
+              },
+              "motivo": "Ponteiro 2 é a posição 4 neste rodízio. Faz parte da recepção com LI e P1 e recebe pela esquerda. Depois do passe, ataca pela entrada (zona 4). Pela regra de sobreposição, precisa estar à frente da posição 5 (LI) e à esquerda da posição 3 (OP)."
+            },
+            "LI": {
+              "x": 45,
+              "y": 66,
+              "para": {
+                "x": 20,
+                "y": 75
+              },
+              "motivo": "Líbero é a posição 5 neste rodízio. Entra no lugar do central que foi para o fundo e é o principal passador: recebe pelo meio. Pela regra de sobreposição, precisa estar atrás da posição 4 (P2) e à esquerda da posição 6 (L)."
+            }
+          }
+        },
+        "defesa": {
+          "resumo": "Na rede: P2 na entrada, C1 no meio e OP na saída. No fundo: LI na 5, P1 na 6 e L na 1. Cada um defende no lugar da sua função.",
+          "posicoes": {
+            "P2": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Ponteiro 2 defende na rede pela entrada (zona 4): é o lugar do ponteiro, que bloqueia e ataca pela entrada. Depois do saque não existe mais regra de sobreposição."
+            },
+            "OP": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Oposto defende na rede pela saída (zona 2): o oposto bloqueia o ataque de entrada do adversário pela saída. Depois do saque não existe mais regra de sobreposição."
+            },
+            "C1": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Central 1 defende na rede pelo meio (zona 3): o central bloqueia pelo meio. Depois do saque não existe mais regra de sobreposição."
+            },
+            "LI": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Líbero defende no fundo esquerda (zona 5): o líbero defende na 5, onde vai a maioria das bolas cruzadas. Depois do saque não existe mais regra de sobreposição."
+            },
+            "L": {
+              "x": 80,
+              "y": 80,
+              "motivo": "Levantador defende no fundo direita (zona 1): o levantador do fundo defende na 1 para sair rápido e levantar. Depois do saque não existe mais regra de sobreposição."
+            },
+            "P1": {
+              "x": 50,
+              "y": 85,
+              "motivo": "Ponteiro 1 defende no fundo meio (zona 6): o ponteiro do fundo cobre o meio e as bolas longas. Depois do saque não existe mais regra de sobreposição."
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "L5",
+      "nome": "L em P5",
+      "apelido": "Levantador no fundo esquerda",
+      "ordem": {
+        "1": "C1",
+        "2": "OP",
+        "3": "P2",
+        "4": "C2",
+        "5": "L",
+        "6": "P1"
+      },
+      "fases": {
+        "saque": {
+          "sacador": "C1",
+          "resumo": {
+            "antiga": "C1 saca da posição 1. Pela regra até 2024, todos respeitam a ordem do rodízio no momento do saque e trocam de lugar logo depois. Depois do saque, cada um vai para a posição da sua função.",
+            "nova": "C1 saca da posição 1. Pela regra atual, o time que saca pode ficar em qualquer posição; o mais comum é já começar onde vai defender. Depois do saque, cada um vai para a posição da sua função."
+          },
+          "antiga": {
+            "C1": {
+              "x": 83,
+              "y": 112,
+              "para": {
+                "x": 20,
+                "y": 80
+              },
+              "motivo": "Central 1 é a posição 1: é quem saca, de dentro da zona de saque. Depois do saque, entra na quadra e defende no fundo esquerda (zona 5)."
+            },
+            "OP": {
+              "x": 83,
+              "y": 20,
+              "para": {
+                "x": 85,
+                "y": 12
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: oposto fica na zona 2. Pela regra de sobreposição, precisa estar à frente da posição 1 (C1) e à direita da posição 3 (P2). Depois do saque, vai defender na rede pela saída (zona 2)."
+            },
+            "P2": {
+              "x": 50,
+              "y": 20,
+              "para": {
+                "x": 15,
+                "y": 12
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: ponteiro 2 fica na zona 3. Pela regra de sobreposição, precisa estar à frente da posição 6 (P1), à direita da posição 4 (C2) e à esquerda da posição 2 (OP). Depois do saque, vai defender na rede pela entrada (zona 4)."
+            },
+            "C2": {
+              "x": 17,
+              "y": 20,
+              "para": {
+                "x": 50,
+                "y": 10
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: central 2 fica na zona 4. Pela regra de sobreposição, precisa estar à frente da posição 5 (L) e à esquerda da posição 3 (P2). Depois do saque, vai defender na rede pelo meio (zona 3)."
+            },
+            "L": {
+              "x": 17,
+              "y": 75,
+              "para": {
+                "x": 80,
+                "y": 80
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: levantador fica na zona 5. Pela regra de sobreposição, precisa estar atrás da posição 4 (C2) e à esquerda da posição 6 (P1). Depois do saque, vai defender no fundo direita (zona 1)."
+            },
+            "P1": {
+              "x": 50,
+              "y": 75,
+              "para": {
+                "x": 50,
+                "y": 85
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: ponteiro 1 fica na zona 6. Pela regra de sobreposição, precisa estar atrás da posição 3 (P2), à direita da posição 5 (L) e à esquerda da posição 1 (C1). Depois do saque, vai defender no fundo meio (zona 6)."
+            }
+          },
+          "nova": {
+            "C1": {
+              "x": 83,
+              "y": 112,
+              "para": {
+                "x": 20,
+                "y": 80
+              },
+              "motivo": "Central 1 é a posição 1: é quem saca, de dentro da zona de saque. Depois do saque, entra na quadra e defende no fundo esquerda (zona 5)."
+            },
+            "OP": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso oposto pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pela saída (zona 2)."
+            },
+            "P2": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso ponteiro 2 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pela entrada (zona 4)."
+            },
+            "C2": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso central 2 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pelo meio (zona 3)."
+            },
+            "L": {
+              "x": 80,
+              "y": 80,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso levantador pode ficar em qualquer posição; o mais comum é já começar onde vai defender: no fundo direita (zona 1)."
+            },
+            "P1": {
+              "x": 50,
+              "y": 85,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso ponteiro 1 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: no fundo meio (zona 6)."
+            }
+          }
+        },
+        "recepcao": {
+          "resumo": "Levantador na 5: fica escondido no fundo e infiltra para levantar. A recepção fica com P2, P1 e LI. No primeiro ataque, cada um bate pelo lado onde está: OP pela saída e P2 pela entrada.",
+          "receptores": [
+            "P2",
+            "P1",
+            "LI"
+          ],
+          "posicoes": {
+            "L": {
+              "x": 12,
+              "y": 38,
+              "para": {
+                "x": 65,
+                "y": 10
+              },
+              "motivo": "Levantador é a posição 5 neste rodízio. Não recebe: fica escondido no fundo, fora da linha de passe, e infiltra para levantar entre a 2 e a 3. Pela regra de sobreposição, precisa estar atrás da posição 4 (C2) e à esquerda da posição 6 (P1)."
+            },
+            "P1": {
+              "x": 48,
+              "y": 66,
+              "para": {
+                "x": 50,
+                "y": 65
+              },
+              "motivo": "Ponteiro 1 é a posição 6 neste rodízio. Faz parte da recepção com P2 e LI e recebe pelo meio. Depois do passe, fica no fundo para o ataque de fundo. Pela regra de sobreposição, precisa estar atrás da posição 3 (P2), à direita da posição 5 (L) e à esquerda da posição 1 (LI)."
+            },
+            "LI": {
+              "x": 80,
+              "y": 64,
+              "para": {
+                "x": 20,
+                "y": 75
+              },
+              "motivo": "Líbero é a posição 1 neste rodízio. Entra no lugar do central que foi para o fundo e é o principal passador: recebe pela direita. Pela regra de sobreposição, precisa estar atrás da posição 2 (OP) e à direita da posição 6 (P1)."
+            },
+            "OP": {
+              "x": 88,
+              "y": 14,
+              "para": {
+                "x": 88,
+                "y": 22
+              },
+              "motivo": "Oposto é a posição 2 neste rodízio. Não recebe: fica junto à rede e, no primeiro ataque, bate pela saída (zona 2), sem cruzar a quadra. Pela regra de sobreposição, precisa estar à frente da posição 1 (LI) e à direita da posição 3 (P2)."
+            },
+            "P2": {
+              "x": 25,
+              "y": 58,
+              "para": {
+                "x": 12,
+                "y": 22
+              },
+              "motivo": "Ponteiro 2 é a posição 3 neste rodízio. Faz parte da recepção com P1 e LI e recebe pela esquerda. Depois do passe, ataca pela entrada (zona 4). Pela regra de sobreposição, precisa estar à frente da posição 6 (P1), à direita da posição 4 (C2) e à esquerda da posição 2 (OP)."
+            },
+            "C2": {
+              "x": 10,
+              "y": 12,
+              "para": {
+                "x": 50,
+                "y": 18
+              },
+              "motivo": "Central 2 é a posição 4 neste rodízio. Não recebe: fica junto à rede, pronto para a bola rápida pelo meio. Pela regra de sobreposição, precisa estar à frente da posição 5 (L) e à esquerda da posição 3 (P2)."
+            }
+          }
+        },
+        "defesa": {
+          "resumo": "Na rede: P2 na entrada, C2 no meio e OP na saída. No fundo: C1 na 5, P1 na 6 e L na 1. Cada um defende no lugar da sua função.",
+          "posicoes": {
+            "C2": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Central 2 defende na rede pelo meio (zona 3): o central bloqueia pelo meio. Depois do saque não existe mais regra de sobreposição."
+            },
+            "P2": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Ponteiro 2 defende na rede pela entrada (zona 4): é o lugar do ponteiro, que bloqueia e ataca pela entrada. Depois do saque não existe mais regra de sobreposição."
+            },
+            "OP": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Oposto defende na rede pela saída (zona 2): o oposto bloqueia o ataque de entrada do adversário pela saída. Depois do saque não existe mais regra de sobreposição."
+            },
+            "L": {
+              "x": 80,
+              "y": 80,
+              "motivo": "Levantador defende no fundo direita (zona 1): o levantador do fundo defende na 1 para sair rápido e levantar. Depois do saque não existe mais regra de sobreposição."
+            },
+            "P1": {
+              "x": 50,
+              "y": 85,
+              "motivo": "Ponteiro 1 defende no fundo meio (zona 6): o ponteiro do fundo cobre o meio e as bolas longas. Depois do saque não existe mais regra de sobreposição."
+            },
+            "C1": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Central 1 defende no fundo esquerda (zona 5): o central do fundo defende na 5. Depois do saque não existe mais regra de sobreposição."
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "L4",
+      "nome": "L em P4",
+      "apelido": "Levantador na frente esquerda",
+      "ordem": {
+        "1": "OP",
+        "2": "P2",
+        "3": "C2",
+        "4": "L",
+        "5": "P1",
+        "6": "C1"
+      },
+      "fases": {
+        "saque": {
+          "sacador": "OP",
+          "resumo": {
+            "antiga": "OP saca da posição 1. Pela regra até 2024, todos respeitam a ordem do rodízio no momento do saque e trocam de lugar logo depois. Depois do saque, cada um vai para a posição da sua função.",
+            "nova": "OP saca da posição 1. Pela regra atual, o time que saca pode ficar em qualquer posição; o mais comum é já começar onde vai defender. Depois do saque, cada um vai para a posição da sua função."
+          },
+          "antiga": {
+            "OP": {
+              "x": 83,
+              "y": 112,
+              "para": {
+                "x": 80,
+                "y": 80
+              },
+              "motivo": "Oposto é a posição 1: é quem saca, de dentro da zona de saque. Depois do saque, entra na quadra e defende no fundo direita (zona 1)."
+            },
+            "P2": {
+              "x": 83,
+              "y": 20,
+              "para": {
+                "x": 15,
+                "y": 12
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: ponteiro 2 fica na zona 2. Pela regra de sobreposição, precisa estar à frente da posição 1 (OP) e à direita da posição 3 (C2). Depois do saque, vai defender na rede pela entrada (zona 4)."
+            },
+            "C2": {
+              "x": 50,
+              "y": 20,
+              "para": {
+                "x": 50,
+                "y": 10
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: central 2 fica na zona 3. Pela regra de sobreposição, precisa estar à frente da posição 6 (LI), à direita da posição 4 (L) e à esquerda da posição 2 (P2). Depois do saque, vai defender na rede pelo meio (zona 3)."
+            },
+            "L": {
+              "x": 17,
+              "y": 20,
+              "para": {
+                "x": 85,
+                "y": 12
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: levantador fica na zona 4. Pela regra de sobreposição, precisa estar à frente da posição 5 (P1) e à esquerda da posição 3 (C2). Depois do saque, vai defender na rede pela saída (zona 2)."
+            },
+            "P1": {
+              "x": 17,
+              "y": 75,
+              "para": {
+                "x": 50,
+                "y": 85
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: ponteiro 1 fica na zona 5. Pela regra de sobreposição, precisa estar atrás da posição 4 (L) e à esquerda da posição 6 (LI). Depois do saque, vai defender no fundo meio (zona 6)."
+            },
+            "LI": {
+              "x": 50,
+              "y": 75,
+              "para": {
+                "x": 20,
+                "y": 80
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: líbero fica na zona 6. Pela regra de sobreposição, precisa estar atrás da posição 3 (C2), à direita da posição 5 (P1) e à esquerda da posição 1 (OP). Depois do saque, vai defender no fundo esquerda (zona 5)."
+            }
+          },
+          "nova": {
+            "OP": {
+              "x": 83,
+              "y": 112,
+              "para": {
+                "x": 80,
+                "y": 80
+              },
+              "motivo": "Oposto é a posição 1: é quem saca, de dentro da zona de saque. Depois do saque, entra na quadra e defende no fundo direita (zona 1)."
+            },
+            "P2": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso ponteiro 2 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pela entrada (zona 4)."
+            },
+            "C2": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso central 2 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pelo meio (zona 3)."
+            },
+            "L": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso levantador pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pela saída (zona 2)."
+            },
+            "P1": {
+              "x": 50,
+              "y": 85,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso ponteiro 1 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: no fundo meio (zona 6)."
+            },
+            "LI": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso líbero pode ficar em qualquer posição; o mais comum é já começar onde vai defender: no fundo esquerda (zona 5)."
+            }
+          }
+        },
+        "recepcao": {
+          "resumo": "Levantador na 4: fica colado na rede e sai para levantar entre a 2 e a 3. A recepção fica com P1, LI e P2. No primeiro ataque, P2 bate pela entrada, C2 pelo meio e OP pelo fundo.",
+          "receptores": [
+            "P1",
+            "LI",
+            "P2"
+          ],
+          "posicoes": {
+            "L": {
+              "x": 10,
+              "y": 10,
+              "para": {
+                "x": 65,
+                "y": 10
+              },
+              "motivo": "Levantador é a posição 4 neste rodízio. Não recebe: fica colado na rede para chegar rápido ao ponto de levantamento, entre a 2 e a 3. Pela regra de sobreposição, precisa estar à frente da posição 5 (P1) e à esquerda da posição 3 (C2)."
+            },
+            "P1": {
+              "x": 22,
+              "y": 62,
+              "para": {
+                "x": 50,
+                "y": 65
+              },
+              "motivo": "Ponteiro 1 é a posição 5 neste rodízio. Faz parte da recepção com LI e P2 e recebe pela esquerda. Depois do passe, fica no fundo para o ataque de fundo. Pela regra de sobreposição, precisa estar atrás da posição 4 (L) e à esquerda da posição 6 (LI)."
+            },
+            "LI": {
+              "x": 50,
+              "y": 66,
+              "para": {
+                "x": 20,
+                "y": 75
+              },
+              "motivo": "Líbero é a posição 6 neste rodízio. Entra no lugar do central que foi para o fundo e é o principal passador: recebe pelo meio. Pela regra de sobreposição, precisa estar atrás da posição 3 (C2), à direita da posição 5 (P1) e à esquerda da posição 1 (OP)."
+            },
+            "OP": {
+              "x": 92,
+              "y": 74,
+              "para": {
+                "x": 82,
+                "y": 65
+              },
+              "motivo": "Oposto é a posição 1 neste rodízio. Não recebe: fica no fundo, fora da linha de passe, e depois ataca pelo fundo. Pela regra de sobreposição, precisa estar atrás da posição 2 (P2) e à direita da posição 6 (LI)."
+            },
+            "P2": {
+              "x": 78,
+              "y": 58,
+              "para": {
+                "x": 12,
+                "y": 22
+              },
+              "motivo": "Ponteiro 2 é a posição 2 neste rodízio. Faz parte da recepção com P1 e LI e recebe pela direita. Depois do passe, ataca pela entrada (zona 4): o levantador sai da 4 para levantar e deixa esse lado livre. Pela regra de sobreposição, precisa estar à frente da posição 1 (OP) e à direita da posição 3 (C2)."
+            },
+            "C2": {
+              "x": 40,
+              "y": 12,
+              "para": {
+                "x": 50,
+                "y": 18
+              },
+              "motivo": "Central 2 é a posição 3 neste rodízio. Não recebe: fica junto à rede, pronto para a bola rápida pelo meio. Pela regra de sobreposição, precisa estar à frente da posição 6 (LI), à direita da posição 4 (L) e à esquerda da posição 2 (P2)."
+            }
+          }
+        },
+        "defesa": {
+          "resumo": "Na rede: P2 na entrada, C2 no meio e L na saída. No fundo: LI na 5, P1 na 6 e OP na 1. Cada um defende no lugar da sua função.",
+          "posicoes": {
+            "L": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Levantador defende na rede pela saída (zona 2): o levantador da rede bloqueia pela saída e fica perto do ponto de levantamento. Depois do saque não existe mais regra de sobreposição."
+            },
+            "C2": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Central 2 defende na rede pelo meio (zona 3): o central bloqueia pelo meio. Depois do saque não existe mais regra de sobreposição."
+            },
+            "P2": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Ponteiro 2 defende na rede pela entrada (zona 4): é o lugar do ponteiro, que bloqueia e ataca pela entrada. Depois do saque não existe mais regra de sobreposição."
+            },
+            "P1": {
+              "x": 50,
+              "y": 85,
+              "motivo": "Ponteiro 1 defende no fundo meio (zona 6): o ponteiro do fundo cobre o meio e as bolas longas. Depois do saque não existe mais regra de sobreposição."
+            },
+            "LI": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Líbero defende no fundo esquerda (zona 5): o líbero defende na 5, onde vai a maioria das bolas cruzadas. Depois do saque não existe mais regra de sobreposição."
+            },
+            "OP": {
+              "x": 80,
+              "y": 80,
+              "motivo": "Oposto defende no fundo direita (zona 1): o oposto do fundo defende na 1, do lado onde ataca. Depois do saque não existe mais regra de sobreposição."
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "L3",
+      "nome": "L em P3",
+      "apelido": "Levantador na frente meio",
+      "ordem": {
+        "1": "P2",
+        "2": "C2",
+        "3": "L",
+        "4": "P1",
+        "5": "C1",
+        "6": "OP"
+      },
+      "fases": {
+        "saque": {
+          "sacador": "P2",
+          "resumo": {
+            "antiga": "P2 saca da posição 1. Pela regra até 2024, todos respeitam a ordem do rodízio no momento do saque e trocam de lugar logo depois. Depois do saque, cada um vai para a posição da sua função.",
+            "nova": "P2 saca da posição 1. Pela regra atual, o time que saca pode ficar em qualquer posição; o mais comum é já começar onde vai defender. Depois do saque, cada um vai para a posição da sua função."
+          },
+          "antiga": {
+            "P2": {
+              "x": 83,
+              "y": 112,
+              "para": {
+                "x": 50,
+                "y": 85
+              },
+              "motivo": "Ponteiro 2 é a posição 1: é quem saca, de dentro da zona de saque. Depois do saque, entra na quadra e defende no fundo meio (zona 6)."
+            },
+            "C2": {
+              "x": 83,
+              "y": 20,
+              "para": {
+                "x": 50,
+                "y": 10
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: central 2 fica na zona 2. Pela regra de sobreposição, precisa estar à frente da posição 1 (P2) e à direita da posição 3 (L). Depois do saque, vai defender na rede pelo meio (zona 3)."
+            },
+            "L": {
+              "x": 50,
+              "y": 20,
+              "para": {
+                "x": 85,
+                "y": 12
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: levantador fica na zona 3. Pela regra de sobreposição, precisa estar à frente da posição 6 (OP), à direita da posição 4 (P1) e à esquerda da posição 2 (C2). Depois do saque, vai defender na rede pela saída (zona 2)."
+            },
+            "P1": {
+              "x": 17,
+              "y": 20,
+              "para": {
+                "x": 15,
+                "y": 12
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: ponteiro 1 fica na zona 4. Pela regra de sobreposição, precisa estar à frente da posição 5 (LI) e à esquerda da posição 3 (L). Depois do saque, vai defender na rede pela entrada (zona 4)."
+            },
+            "LI": {
+              "x": 17,
+              "y": 75,
+              "para": {
+                "x": 20,
+                "y": 80
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: líbero fica na zona 5. Pela regra de sobreposição, precisa estar atrás da posição 4 (P1) e à esquerda da posição 6 (OP). Depois do saque, vai defender no fundo esquerda (zona 5)."
+            },
+            "OP": {
+              "x": 50,
+              "y": 75,
+              "para": {
+                "x": 80,
+                "y": 80
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: oposto fica na zona 6. Pela regra de sobreposição, precisa estar atrás da posição 3 (L), à direita da posição 5 (LI) e à esquerda da posição 1 (P2). Depois do saque, vai defender no fundo direita (zona 1)."
+            }
+          },
+          "nova": {
+            "P2": {
+              "x": 83,
+              "y": 112,
+              "para": {
+                "x": 50,
+                "y": 85
+              },
+              "motivo": "Ponteiro 2 é a posição 1: é quem saca, de dentro da zona de saque. Depois do saque, entra na quadra e defende no fundo meio (zona 6)."
+            },
+            "C2": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso central 2 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pelo meio (zona 3)."
+            },
+            "L": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso levantador pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pela saída (zona 2)."
+            },
+            "P1": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso ponteiro 1 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pela entrada (zona 4)."
+            },
+            "LI": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso líbero pode ficar em qualquer posição; o mais comum é já começar onde vai defender: no fundo esquerda (zona 5)."
+            },
+            "OP": {
+              "x": 80,
+              "y": 80,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso oposto pode ficar em qualquer posição; o mais comum é já começar onde vai defender: no fundo direita (zona 1)."
+            }
+          }
+        },
+        "recepcao": {
+          "resumo": "Levantador na 3: fica colado na rede. A recepção fica com P1, LI e P2. No primeiro ataque, cada um bate pelo lado onde está: P1 pela entrada.",
+          "receptores": [
+            "P1",
+            "LI",
+            "P2"
+          ],
+          "posicoes": {
+            "L": {
+              "x": 55,
+              "y": 10,
+              "para": {
+                "x": 65,
+                "y": 10
+              },
+              "motivo": "Levantador é a posição 3 neste rodízio. Não recebe: fica colado na rede para chegar rápido ao ponto de levantamento, entre a 2 e a 3. Pela regra de sobreposição, precisa estar à frente da posição 6 (OP), à direita da posição 4 (P1) e à esquerda da posição 2 (C2)."
+            },
+            "P1": {
+              "x": 15,
+              "y": 58,
+              "para": {
+                "x": 12,
+                "y": 22
+              },
+              "motivo": "Ponteiro 1 é a posição 4 neste rodízio. Faz parte da recepção com LI e P2 e recebe pela esquerda. Depois do passe, ataca pela entrada (zona 4). Pela regra de sobreposição, precisa estar à frente da posição 5 (LI) e à esquerda da posição 3 (L)."
+            },
+            "LI": {
+              "x": 40,
+              "y": 66,
+              "para": {
+                "x": 20,
+                "y": 75
+              },
+              "motivo": "Líbero é a posição 5 neste rodízio. Entra no lugar do central que foi para o fundo e é o principal passador: recebe pelo meio. Pela regra de sobreposição, precisa estar atrás da posição 4 (P1) e à esquerda da posição 6 (OP)."
+            },
+            "OP": {
+              "x": 62,
+              "y": 40,
+              "para": {
+                "x": 82,
+                "y": 65
+              },
+              "motivo": "Oposto é a posição 6 neste rodízio. Não recebe: fica no fundo, fora da linha de passe, e depois ataca pelo fundo. Pela regra de sobreposição, precisa estar atrás da posição 3 (L), à direita da posição 5 (LI) e à esquerda da posição 1 (P2)."
+            },
+            "P2": {
+              "x": 80,
+              "y": 64,
+              "para": {
+                "x": 50,
+                "y": 65
+              },
+              "motivo": "Ponteiro 2 é a posição 1 neste rodízio. Faz parte da recepção com P1 e LI e recebe pela direita. Depois do passe, fica no fundo para o ataque de fundo. Pela regra de sobreposição, precisa estar atrás da posição 2 (C2) e à direita da posição 6 (OP)."
+            },
+            "C2": {
+              "x": 88,
+              "y": 12,
+              "para": {
+                "x": 50,
+                "y": 18
+              },
+              "motivo": "Central 2 é a posição 2 neste rodízio. Não recebe: fica junto à rede, pronto para a bola rápida pelo meio. Pela regra de sobreposição, precisa estar à frente da posição 1 (P2) e à direita da posição 3 (L)."
+            }
+          }
+        },
+        "defesa": {
+          "resumo": "Na rede: P1 na entrada, C2 no meio e L na saída. No fundo: LI na 5, P2 na 6 e OP na 1. Cada um defende no lugar da sua função.",
+          "posicoes": {
+            "P1": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Ponteiro 1 defende na rede pela entrada (zona 4): é o lugar do ponteiro, que bloqueia e ataca pela entrada. Depois do saque não existe mais regra de sobreposição."
+            },
+            "L": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Levantador defende na rede pela saída (zona 2): o levantador da rede bloqueia pela saída e fica perto do ponto de levantamento. Depois do saque não existe mais regra de sobreposição."
+            },
+            "C2": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Central 2 defende na rede pelo meio (zona 3): o central bloqueia pelo meio. Depois do saque não existe mais regra de sobreposição."
+            },
+            "LI": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Líbero defende no fundo esquerda (zona 5): o líbero defende na 5, onde vai a maioria das bolas cruzadas. Depois do saque não existe mais regra de sobreposição."
+            },
+            "OP": {
+              "x": 80,
+              "y": 80,
+              "motivo": "Oposto defende no fundo direita (zona 1): o oposto do fundo defende na 1, do lado onde ataca. Depois do saque não existe mais regra de sobreposição."
+            },
+            "P2": {
+              "x": 50,
+              "y": 85,
+              "motivo": "Ponteiro 2 defende no fundo meio (zona 6): o ponteiro do fundo cobre o meio e as bolas longas. Depois do saque não existe mais regra de sobreposição."
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "L2",
+      "nome": "L em P2",
+      "apelido": "Levantador na frente direita",
+      "ordem": {
+        "1": "C2",
+        "2": "L",
+        "3": "P1",
+        "4": "C1",
+        "5": "OP",
+        "6": "P2"
+      },
+      "fases": {
+        "saque": {
+          "sacador": "C2",
+          "resumo": {
+            "antiga": "C2 saca da posição 1. Pela regra até 2024, todos respeitam a ordem do rodízio no momento do saque e trocam de lugar logo depois. Depois do saque, cada um vai para a posição da sua função.",
+            "nova": "C2 saca da posição 1. Pela regra atual, o time que saca pode ficar em qualquer posição; o mais comum é já começar onde vai defender. Depois do saque, cada um vai para a posição da sua função."
+          },
+          "antiga": {
+            "C2": {
+              "x": 83,
+              "y": 112,
+              "para": {
+                "x": 20,
+                "y": 80
+              },
+              "motivo": "Central 2 é a posição 1: é quem saca, de dentro da zona de saque. Depois do saque, entra na quadra e defende no fundo esquerda (zona 5)."
+            },
+            "L": {
+              "x": 83,
+              "y": 20,
+              "para": {
+                "x": 85,
+                "y": 12
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: levantador fica na zona 2. Pela regra de sobreposição, precisa estar à frente da posição 1 (C2) e à direita da posição 3 (P1). Depois do saque, vai defender na rede pela saída (zona 2)."
+            },
+            "P1": {
+              "x": 50,
+              "y": 20,
+              "para": {
+                "x": 15,
+                "y": 12
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: ponteiro 1 fica na zona 3. Pela regra de sobreposição, precisa estar à frente da posição 6 (P2), à direita da posição 4 (C1) e à esquerda da posição 2 (L). Depois do saque, vai defender na rede pela entrada (zona 4)."
+            },
+            "C1": {
+              "x": 17,
+              "y": 20,
+              "para": {
+                "x": 50,
+                "y": 10
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: central 1 fica na zona 4. Pela regra de sobreposição, precisa estar à frente da posição 5 (OP) e à esquerda da posição 3 (P1). Depois do saque, vai defender na rede pelo meio (zona 3)."
+            },
+            "OP": {
+              "x": 17,
+              "y": 75,
+              "para": {
+                "x": 80,
+                "y": 80
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: oposto fica na zona 5. Pela regra de sobreposição, precisa estar atrás da posição 4 (C1) e à esquerda da posição 6 (P2). Depois do saque, vai defender no fundo direita (zona 1)."
+            },
+            "P2": {
+              "x": 50,
+              "y": 75,
+              "para": {
+                "x": 50,
+                "y": 85
+              },
+              "motivo": "Na regra até 2024, o time que saca também respeita a ordem: ponteiro 2 fica na zona 6. Pela regra de sobreposição, precisa estar atrás da posição 3 (P1), à direita da posição 5 (OP) e à esquerda da posição 1 (C2). Depois do saque, vai defender no fundo meio (zona 6)."
+            }
+          },
+          "nova": {
+            "C2": {
+              "x": 83,
+              "y": 112,
+              "para": {
+                "x": 20,
+                "y": 80
+              },
+              "motivo": "Central 2 é a posição 1: é quem saca, de dentro da zona de saque. Depois do saque, entra na quadra e defende no fundo esquerda (zona 5)."
+            },
+            "L": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso levantador pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pela saída (zona 2)."
+            },
+            "P1": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso ponteiro 1 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pela entrada (zona 4)."
+            },
+            "C1": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso central 1 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: na rede pelo meio (zona 3)."
+            },
+            "OP": {
+              "x": 80,
+              "y": 80,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso oposto pode ficar em qualquer posição; o mais comum é já começar onde vai defender: no fundo direita (zona 1)."
+            },
+            "P2": {
+              "x": 50,
+              "y": 85,
+              "motivo": "Com a regra atual, o time que saca não precisa respeitar a ordem do rodízio. Por isso ponteiro 2 pode ficar em qualquer posição; o mais comum é já começar onde vai defender: no fundo meio (zona 6)."
+            }
+          }
+        },
+        "recepcao": {
+          "resumo": "Levantador na 2: fica colado na rede. A recepção fica com P1, P2 e LI. No primeiro ataque, cada um bate pelo lado onde está: P1 pela entrada.",
+          "receptores": [
+            "P1",
+            "P2",
+            "LI"
+          ],
+          "posicoes": {
+            "L": {
+              "x": 88,
+              "y": 10,
+              "para": {
+                "x": 65,
+                "y": 10
+              },
+              "motivo": "Levantador é a posição 2 neste rodízio. Não recebe: fica colado na rede para chegar rápido ao ponto de levantamento, entre a 2 e a 3. Pela regra de sobreposição, precisa estar à frente da posição 1 (LI) e à direita da posição 3 (P1)."
+            },
+            "P1": {
+              "x": 28,
+              "y": 58,
+              "para": {
+                "x": 12,
+                "y": 22
+              },
+              "motivo": "Ponteiro 1 é a posição 3 neste rodízio. Faz parte da recepção com P2 e LI e recebe pela esquerda. Depois do passe, ataca pela entrada (zona 4). Pela regra de sobreposição, precisa estar à frente da posição 6 (P2), à direita da posição 4 (C1) e à esquerda da posição 2 (L)."
+            },
+            "C1": {
+              "x": 8,
+              "y": 12,
+              "para": {
+                "x": 50,
+                "y": 18
+              },
+              "motivo": "Central 1 é a posição 4 neste rodízio. Não recebe: fica junto à rede, pronto para a bola rápida pelo meio. Pela regra de sobreposição, precisa estar à frente da posição 5 (OP) e à esquerda da posição 3 (P1)."
+            },
+            "OP": {
+              "x": 10,
+              "y": 40,
+              "para": {
+                "x": 82,
+                "y": 65
+              },
+              "motivo": "Oposto é a posição 5 neste rodízio. Não recebe: fica no fundo, fora da linha de passe, e depois ataca pelo fundo. Pela regra de sobreposição, precisa estar atrás da posição 4 (C1) e à esquerda da posição 6 (P2)."
+            },
+            "P2": {
+              "x": 50,
+              "y": 66,
+              "para": {
+                "x": 50,
+                "y": 65
+              },
+              "motivo": "Ponteiro 2 é a posição 6 neste rodízio. Faz parte da recepção com P1 e LI e recebe pelo meio. Depois do passe, fica no fundo para o ataque de fundo. Pela regra de sobreposição, precisa estar atrás da posição 3 (P1), à direita da posição 5 (OP) e à esquerda da posição 1 (LI)."
+            },
+            "LI": {
+              "x": 80,
+              "y": 64,
+              "para": {
+                "x": 20,
+                "y": 75
+              },
+              "motivo": "Líbero é a posição 1 neste rodízio. Entra no lugar do central que foi para o fundo e é o principal passador: recebe pela direita. Pela regra de sobreposição, precisa estar atrás da posição 2 (L) e à direita da posição 6 (P2)."
+            }
+          }
+        },
+        "defesa": {
+          "resumo": "Na rede: P1 na entrada, C1 no meio e L na saída. No fundo: C2 na 5, P2 na 6 e OP na 1. Cada um defende no lugar da sua função.",
+          "posicoes": {
+            "C1": {
+              "x": 50,
+              "y": 10,
+              "motivo": "Central 1 defende na rede pelo meio (zona 3): o central bloqueia pelo meio. Depois do saque não existe mais regra de sobreposição."
+            },
+            "P1": {
+              "x": 15,
+              "y": 12,
+              "motivo": "Ponteiro 1 defende na rede pela entrada (zona 4): é o lugar do ponteiro, que bloqueia e ataca pela entrada. Depois do saque não existe mais regra de sobreposição."
+            },
+            "L": {
+              "x": 85,
+              "y": 12,
+              "motivo": "Levantador defende na rede pela saída (zona 2): o levantador da rede bloqueia pela saída e fica perto do ponto de levantamento. Depois do saque não existe mais regra de sobreposição."
+            },
+            "OP": {
+              "x": 80,
+              "y": 80,
+              "motivo": "Oposto defende no fundo direita (zona 1): o oposto do fundo defende na 1, do lado onde ataca. Depois do saque não existe mais regra de sobreposição."
+            },
+            "P2": {
+              "x": 50,
+              "y": 85,
+              "motivo": "Ponteiro 2 defende no fundo meio (zona 6): o ponteiro do fundo cobre o meio e as bolas longas. Depois do saque não existe mais regra de sobreposição."
+            },
+            "C2": {
+              "x": 20,
+              "y": 80,
+              "motivo": "Central 2 defende no fundo esquerda (zona 5): o central do fundo defende na 5. Depois do saque não existe mais regra de sobreposição."
+            }
+          }
+        }
+      }
+    }
+  ]
+}

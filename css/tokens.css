@@ -1,0 +1,36 @@
+/* Tokens do design Vôlei Help. Fonte única: Outfit (SIL Open Font License, ver assets/fonts/OFL-Outfit.txt); a logo é SVG. */
+:root {
+  --marinho: #1d2f63;
+  --roxo: #8e3f8f;
+  --roxo-tinta: #f2e1ef;
+  --piso: #f7f3f6;
+  --fundo: #f5f6fa;
+  --branco: #ffffff;
+  --marinho-suave: #4f5d80;
+  --marinho-linha: #dcdfea;
+  --marinho-tinta: #e9ecf4;
+
+  --jogador-l: #1d2f63;
+  --jogador-op: #c48ac3;
+  --jogador-p: #98b0e0;
+  --jogador-c: #e6c7e4;
+  --jogador-li: #ffffff;
+  --jogador-a: #b9c6e6;   /* 6-0: atacante sem função fixa */
+
+  --acerto: #1d8a4c;
+  --acerto-fundo: #e2f4e9;
+  --erro: #c4302b;
+  --erro-fundo: #fbe5e3;
+
+  --esp-1: 4px; --esp-2: 8px; --esp-3: 12px; --esp-4: 16px; --esp-6: 24px; --esp-8: 32px;
+  --raio-sm: 6px; --raio-md: 10px; --raio-pilula: 999px;
+  --sombra-card: 0 1px 2px rgba(29, 47, 99, .06), 0 4px 16px rgba(29, 47, 99, .06);
+
+  --font-sans: Outfit, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* Outfit é variável: um arquivo cobre os pesos 100–900 */
+@font-face { font-family: "Outfit"; src: url("../assets/fonts/Outfit-latin.woff2") format("woff2"); font-weight: 100 900; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Outfit"; src: url("../assets/fonts/Outfit-latin-ext.woff2") format("woff2"); font-weight: 100 900; font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
