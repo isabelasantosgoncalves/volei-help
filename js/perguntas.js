@@ -1,5 +1,5 @@
-import { criarQuadra } from './quadra.js?v=20261021-5';
-import { esc } from './dados.js?v=20261021-5';
+import { criarQuadra } from './quadra.js?v=20261030-1';
+import { esc } from './dados.js?v=20261030-1';
 
 // Motor das perguntas: mostra uma "carta" (montada pelo treino.js), recebe o toque na zona e explica.
 // Uma carta tem: rotulo, enunciado, dica, certa (zona), jogadores, chaveQuadra,

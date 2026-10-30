@@ -1,9 +1,9 @@
-import { legendaHTML } from './quadra.js?v=20261021-5';
-import { carregarSistemas, carregarFundamentos, guardar } from './dados.js?v=20261021-5';
-import { iniciarFundamentos } from './fundamentos.js?v=20261021-5';
-import { iniciarSistemas } from './sistemas.js?v=20261021-5';
-import { iniciarTreino } from './treino.js?v=20261021-5';
-import { iniciarPrancheta } from './prancheta.js?v=20261021-5';
+import { legendaHTML } from './quadra.js?v=20261030-1';
+import { carregarSistemas, carregarFundamentos, guardar } from './dados.js?v=20261030-1';
+import { iniciarFundamentos } from './fundamentos.js?v=20261030-1';
+import { iniciarSistemas } from './sistemas.js?v=20261030-1';
+import { iniciarTreino } from './treino.js?v=20261030-1';
+import { iniciarPrancheta } from './prancheta.js?v=20261030-1';
 
 const [sistemas, fundamentos] = await Promise.all([carregarSistemas(), carregarFundamentos()]);
 const padrao = sistemas.porId['5-1'] || sistemas.lista[0];

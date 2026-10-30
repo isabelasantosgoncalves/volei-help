@@ -87,7 +87,7 @@ Cada bloco tem `titulo`, `texto` (parágrafos; `**negrito**` funciona) e `intera
 
 ## Versão dos arquivos
 
-Os arquivos de `css/` e `js/` são carregados com um número de versão (`?v=20261021-5`) para o navegador não usar cópias antigas. Ao mudar algum deles, troque esse número em todos os lugares (no `index.html` e nos `import` dos arquivos `js/*.js`). Os arquivos de `data/` sempre são buscados de novo.
+Os arquivos de `css/` e `js/` são carregados com um número de versão (`?v=20261030-1`) para o navegador não usar cópias antigas. Ao mudar algum deles, troque esse número em todos os lugares (no `index.html` e nos `import` dos arquivos `js/*.js`). Os arquivos de `data/` sempre são buscados de novo.
 
 ## Preparação para app (PWA)
 

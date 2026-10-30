@@ -286,6 +286,8 @@ export function habilitarArrasto(q, { posicoes, podeArrastar = () => true, aoIni
   };
   q.svg.addEventListener('pointerup', soltar);
   q.svg.addEventListener('pointercancel', soltar);
+  // reforço para celulares que ignoram touch-action: enquanto arrasta, a página não rola
+  q.svg.addEventListener('touchmove', e => { if (arrasto) e.preventDefault(); }, { passive: false });
 }
 
 // legenda com as funções presentes no sistema e as siglas de cada uma

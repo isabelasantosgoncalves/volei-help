@@ -1,8 +1,8 @@
-import { zonaDoPonto, NOME_ZONA, ZONAS } from './quadra.js?v=20261021-5';
-import { FASES, posicoes, posicaoOficial, levantadorDe, numeroLevantador, funcoesDe, comArtigo, guardar, esc } from './dados.js?v=20261021-5';
-import { fraseSobreposicao, vizinhos, linhasSobreposicao, ZONA_DESCRICAO, NUMERADOS, LETRAS } from './fundamentos.js?v=20261021-5';
-import { criarPerguntas } from './perguntas.js?v=20261021-5';
-import { criarMontar } from './montar.js?v=20261021-5';
+import { zonaDoPonto, NOME_ZONA, ZONAS } from './quadra.js?v=20261030-1';
+import { FASES, posicoes, posicaoOficial, levantadorDe, numeroLevantador, funcoesDe, comArtigo, guardar, esc } from './dados.js?v=20261030-1';
+import { fraseSobreposicao, vizinhos, linhasSobreposicao, ZONA_DESCRICAO, NUMERADOS, LETRAS } from './fundamentos.js?v=20261030-1';
+import { criarPerguntas } from './perguntas.js?v=20261030-1';
+import { criarMontar } from './montar.js?v=20261030-1';
 
 // Repetição espaçada (caixas de Leitner): cada pergunta/desafio é uma carta.
 // Acertou → sobe uma caixa e aparece menos. Errou → volta para a caixa 0 e aparece mais.

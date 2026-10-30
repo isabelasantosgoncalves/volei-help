@@ -117,7 +117,9 @@ body.na-inicio .rodape { padding-bottom: var(--esp-6); }
 
 /* ===================== Quadra ===================== */
 .vh-quadra { background: var(--branco); border: 1px solid var(--marinho-linha); border-radius: var(--raio-sm); padding: 8px; }
-.quadra { width: 100%; display: block; touch-action: none; user-select: none; -webkit-user-select: none; }
+.quadra { width: 100%; display: block; touch-action: manipulation; user-select: none; -webkit-user-select: none; }
+/* só segura o toque (sem rolar a página) onde dá para arrastar ou tracejar */
+#m-quadra .q-bola, #e-quadra .q-bola, #e-quadra.desenhando .quadra { touch-action: none; }
 .q-piso { fill: var(--branco); }
 .q-campo { fill: var(--piso); }
 .q-ataque { fill: var(--roxo-tinta); opacity: .6; }

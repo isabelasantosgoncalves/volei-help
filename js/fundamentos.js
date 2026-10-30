@@ -1,5 +1,5 @@
-import { criarQuadra, ZONAS, NOME_ZONA, FUNCOES } from './quadra.js?v=20261021-5';
-import { esc, negrito } from './dados.js?v=20261021-5';
+import { criarQuadra, ZONAS, NOME_ZONA, FUNCOES } from './quadra.js?v=20261030-1';
+import { esc, negrito } from './dados.js?v=20261030-1';
 
 // vizinhos de cada posição na regra de sobreposição
 const FRENTE = [4, 3, 2], FUNDO = [5, 6, 1];

@@ -1,5 +1,5 @@
-import { criarQuadra, ZONAS } from './quadra.js?v=20261021-5';
-import { FASES, posicoes, resumo, variacoesDe, posicaoOficial, levantadorDe, numeroLevantador, funcoesDe, guardar, esc } from './dados.js?v=20261021-5';
+import { criarQuadra, ZONAS } from './quadra.js?v=20261030-1';
+import { FASES, posicoes, resumo, variacoesDe, posicaoOficial, levantadorDe, numeroLevantador, funcoesDe, guardar, esc } from './dados.js?v=20261030-1';
 
 const SETAS = { formacao: 'Formação', jogo: 'Posição de jogo' };
 const ICONE_PLAY = '<svg class="ico" viewBox="0 0 24 24"><path d="M8 5.5v13l10-6.5z"/></svg>';

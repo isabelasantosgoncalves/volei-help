@@ -1,5 +1,5 @@
-import { criarQuadra, habilitarArrasto, LIMITE_BANCO } from './quadra.js?v=20261021-5';
-import { FASES, posicoes, funcoesDe, guardar, esc } from './dados.js?v=20261021-5';
+import { criarQuadra, habilitarArrasto, LIMITE_BANCO } from './quadra.js?v=20261030-1';
+import { FASES, posicoes, funcoesDe, guardar, esc } from './dados.js?v=20261030-1';
 
 // Prancheta: partir de um rodízio ou do zero, ajustar arrastando e traçar jogadas.
 const SVGNS = 'http://www.w3.org/2000/svg';
@@ -128,6 +128,8 @@ export function iniciarPrancheta(ctx) {
       q.desenhos.appendChild(el);
       q.svg.setPointerCapture(e.pointerId);
     });
+    // reforço para celulares que ignoram touch-action: no modo Tracejar, a página não rola
+    q.svg.addEventListener('touchmove', e => { if (st.ferramenta === 'desenhar') e.preventDefault(); }, { passive: false });
     q.svg.addEventListener('pointermove', e => {
       if (!atual) return;
       const p = q.pontoSVG(e.clientX, e.clientY), u = atual[atual.length - 1];

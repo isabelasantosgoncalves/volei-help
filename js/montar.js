@@ -1,5 +1,5 @@
-import { criarQuadra, habilitarArrasto, LIMITE_BANCO } from './quadra.js?v=20261021-5';
-import { guardar } from './dados.js?v=20261021-5';
+import { criarQuadra, habilitarArrasto, LIMITE_BANCO } from './quadra.js?v=20261030-1';
+import { guardar } from './dados.js?v=20261030-1';
 
 // distância máxima (em unidades da quadra, 0–100) para considerar a posição certa
 const TOLERANCIA = 14;
